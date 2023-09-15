@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-globalpowerranking-dev-185348-authRole",
+      "UnauthRoleArn": "arn:aws:iam::437547041464:role/amplify-globalpowerranking-dev-185348-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::437547041464:role/amplify-globalpowerranking-dev-185348-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-globalpowerranking-dev-185348-deployment",
+      "UnauthRoleName": "amplify-globalpowerranking-dev-185348-unauthRole",
+      "StackName": "amplify-globalpowerranking-dev-185348",
+      "StackId": "arn:aws:cloudformation:us-east-1:437547041464:stack/amplify-globalpowerranking-dev-185348/8cbf65b0-52a1-11ee-81ff-0a75593fb02b",
+      "AmplifyAppId": "d2rst66a8nb44w"
+    }
+  }
+}
