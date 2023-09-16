@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -55,6 +57,7 @@ export const AnimatedBlob: React.FC<AnimatedBlobType> = ({
         borderRadius: borderRadius,
         backgroundColor: backgroundColor,
         filter: "blur(125px)",
+        boxShadow: "",
         x: coordinates.x,
         y: coordinates.y,
       }}

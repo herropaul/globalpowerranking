@@ -4,7 +4,7 @@ import { AnimatedBlob } from "./components/AnimatedBlob";
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <nav className="flex space-x-4 mb-4 w-full items-start">
+      <nav className="flex space-x-4 mb-4 w-full items-start relative">
         <button className="font-bold py-2 px-4 rounded">Tournaments</button>
         <button className="font-bold py-2 px-4 rounded">Team Rankings</button>
         <button className="font-bold py-2 px-4 rounded">Global Rankings</button>
@@ -46,7 +46,7 @@ export default function Home() {
           backgroundColor="#7391AF"
           clockwise={true}
         />
-        <div className="">
+        <div className=" relative">
           <h1 className=" text-8xl font-bold mb-4 text-center">
             Global Power Ranking
           </h1>
@@ -54,8 +54,6 @@ export default function Home() {
             Predictions for LoL esports teams
           </h2>
         </div>
-        {/* <div className="flex justify-center items-center">      
-        </div> */}
       </div>
     </div>
   );

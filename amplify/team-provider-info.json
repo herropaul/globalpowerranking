@@ -10,6 +10,14 @@
       "StackName": "amplify-globalpowerranking-dev-185348",
       "StackId": "arn:aws:cloudformation:us-east-1:437547041464:stack/amplify-globalpowerranking-dev-185348/8cbf65b0-52a1-11ee-81ff-0a75593fb02b",
       "AmplifyAppId": "d2rst66a8nb44w"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2rst66a8nb44w",
+          "type": "cicd"
+        }
+      }
     }
   }
 }
