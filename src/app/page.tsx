@@ -1,6 +1,8 @@
 "use client";
+import Image from "next/image";
 import { AnimatedBlob } from "./components/AnimatedBlob";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [isClient, setIsClient] = useState<boolean>(false);
@@ -15,6 +17,9 @@ export default function Home() {
         className="flex space-x-4 mb-4 w-full items-start"
         style={{ zIndex: 1 }}
       >
+        <Link href="/">
+          <Image src="/homeicon.svg" alt="Home Icon" width={30} height={35} />
+        </Link>
         <button className="font-bold py-2 px-4 rounded">Tournaments</button>
         <button className="font-bold py-2 px-4 rounded">Team Rankings</button>
         <button className="font-bold py-2 px-4 rounded">Global Rankings</button>
