@@ -60,6 +60,7 @@ export const AnimatedBlob: React.FC<AnimatedBlobType> = ({
         boxShadow: "",
         x: coordinates.x,
         y: coordinates.y,
+        zIndex: -1,
       }}
     ></motion.div>
   );

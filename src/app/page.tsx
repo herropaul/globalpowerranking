@@ -11,7 +11,10 @@ export default function Home() {
 
   return (
     <div className="flex flex-col overflow-hidden">
-      <nav className="flex space-x-4 mb-4 w-full items-start">
+      <nav
+        className="flex space-x-4 mb-4 w-full items-start"
+        style={{ zIndex: 1 }}
+      >
         <button className="font-bold py-2 px-4 rounded">Tournaments</button>
         <button className="font-bold py-2 px-4 rounded">Team Rankings</button>
         <button className="font-bold py-2 px-4 rounded">Global Rankings</button>
