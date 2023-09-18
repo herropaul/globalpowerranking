@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="flex flex-col overflow-hidden">
       <nav
-        className="flex space-x-4 mb-4 w-full items-start"
+        className="flex space-x-4 my-4 mx-10 w-full items-start"
         style={{ zIndex: 1 }}
       >
         <Link href="/">
