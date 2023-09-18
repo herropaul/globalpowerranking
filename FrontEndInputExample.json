@@ -1,0 +1,47 @@
+//Front End Input
+{
+    
+    
+    "Input":{
+        //At least 1 is required
+        //Both could be possible
+        "team": ["team1".id, "team2".id], //size is arbitrary    
+        "tournament": "tournament1".id, //tournament is optional
+        "tournament_format": "single_elims" //possible feature?
+    },
+
+
+    "Output": {
+        "summary":{
+            "timestamp": datetime.now(), //timestamp when the output is made (meant for logging)
+            "team": ['team1', 'team2'],
+            "tournament_format": "single_elims", //possible feature
+        },
+        "data": [{
+            //everything
+            "rankings":{
+                "team1": 5,
+                "team2": 1,
+                "team3": 2,
+                "team4": 3,
+                "team5": 4,
+            },
+            "details":{
+                "page":1,
+                "winners": { //model will output this
+                    "round1":{
+                        "match1":["team1".id],
+                        "match2": ["team2".id],
+                        "match3": ["team3".id]}
+                    },
+                    "round2":{
+                        "match1":["team1".id],
+                        "match2": ["team2".id],
+                        "match3": ["team3".id]
+                    }
+                },
+            ]
+        }
+    
+        },
+}
