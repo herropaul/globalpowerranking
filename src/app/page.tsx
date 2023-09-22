@@ -1,22 +1,61 @@
 "use client";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const imageStyle = {
-  opacity: 0.7,
+  opacity: 0.9,
 };
 
+const images = [
+  "/lec_season_finals_2023.jpg",
+  "/lec_summer_final_2022.jpg",
+  "/lec_summer_semi_2022.jpg",
+  "/lol_2015_worlds.jpeg",
+];
+
 export default function Home() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prevCurrent) => (prevCurrent + 1) % images.length);
+    }, 3000); // Change image every 5 seconds
+
+    return () => clearInterval(timer);
+  }, []);
   return (
     <div className="flex flex-col overflow-hidden relative">
-      <Image
+      {/* <Image
         priority={true}
         fill
         src={"/lec_season_finals_2023.jpg"}
         alt="LCS 2023"
         style={imageStyle}
-      />
+      /> */}
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={current}
+          src={images[current]}
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 0.125, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.9 }}
+          transition={{
+            opacity: { duration: 1, ease: "easeInOut" },
+            scale: { duration: 1, ease: "easeInOut" },
+          }}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            zIndex: -1,
+          }}
+        />
+      </AnimatePresence>
       {/* Navbar */}
       <nav
         className="flex space-x-4 my-4 mx-10 w-full items-start"
