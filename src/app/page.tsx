@@ -27,19 +27,12 @@ export default function Home() {
   }, []);
   return (
     <div className="flex flex-col overflow-hidden relative">
-      {/* <Image
-        priority={true}
-        fill
-        src={"/lec_season_finals_2023.jpg"}
-        alt="LCS 2023"
-        style={imageStyle}
-      /> */}
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="sync">
         <motion.img
           key={current}
           src={images[current]}
           initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 0.125, scale: 1 }}
+          animate={{ opacity: 0.3, scale: 1 }}
           exit={{ opacity: 0, scale: 0.9 }}
           transition={{
             opacity: { duration: 1, ease: "easeInOut" },
