@@ -1,18 +1,62 @@
 "use client";
 import Image from "next/image";
-import { AnimatedBlob } from "./components/AnimatedBlob";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
+const imageStyle = {
+  opacity: 0.9,
+};
+
+const images = [
+  "/lec_season_finals_2023.jpg",
+  "/lec_summer_final_2022.jpg",
+  "/lec_summer_semi_2022.jpg",
+  "/lol_2015_worlds.jpeg",
+];
+
 export default function Home() {
-  const [isClient, setIsClient] = useState<boolean>(false);
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    const timer = setInterval(() => {
+      setCurrent((prevCurrent) => (prevCurrent + 1) % images.length);
+    }, 3000); // Change image every 5 seconds
 
+    return () => clearInterval(timer);
+  }, []);
   return (
-    <div className="flex flex-col overflow-hidden">
+    <div className="flex flex-col overflow-hidden relative">
+      {/* <Image
+        priority={true}
+        fill
+        src={"/lec_season_finals_2023.jpg"}
+        alt="LCS 2023"
+        style={imageStyle}
+      /> */}
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={current}
+          src={images[current]}
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 0.125, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.9 }}
+          transition={{
+            opacity: { duration: 1, ease: "easeInOut" },
+            scale: { duration: 1, ease: "easeInOut" },
+          }}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            zIndex: -1,
+          }}
+        />
+      </AnimatePresence>
+      {/* Navbar */}
       <nav
         className="flex space-x-4 my-4 mx-10 w-full items-start"
         style={{ zIndex: 1 }}
@@ -24,56 +68,22 @@ export default function Home() {
         <button className="font-bold py-2 px-4 rounded">Team Rankings</button>
         <button className="font-bold py-2 px-4 rounded">Global Rankings</button>
       </nav>
-      {isClient ? (
-        <div className="flex flex-col items-center justify-center min-h-screen relative w-full">
-          <AnimatedBlob
-            radius={200}
-            duration={20}
-            top={0}
-            left={0}
-            borderRadius="28% 72% 79% 21% / 21% 40% 60% 79%"
-            backgroundColor="#B99D76"
-            clockwise={true}
-          />
-          <AnimatedBlob
-            radius={200}
-            duration={20}
-            top={0}
-            left={window.innerWidth - 384}
-            borderRadius="61% 39% 19% 81% / 72% 40% 60% 28%"
-            backgroundColor="#0080DA"
-            clockwise={false}
-          />
-          <AnimatedBlob
-            radius={200}
-            duration={20}
-            top={window.innerHeight - 384}
-            left={0}
-            borderRadius="61% 39% 19% 81% / 29% 88% 12% 71%"
-            backgroundColor="#00218A"
-            clockwise={false}
-          />
-          <AnimatedBlob
-            radius={200}
-            duration={20}
-            top={window.innerHeight - 384}
-            left={window.innerWidth - 384}
-            borderRadius="29% 71% 19% 81% / 47% 20% 80% 53%"
-            backgroundColor="#7391AF"
-            clockwise={true}
-          />
-          <div className=" relative">
-            <h1 className=" text-8xl font-bold mb-4 text-center">
-              Global Power Ranking
-            </h1>
-            <h2 className="text-3xl font-semibold mb-2 text-center">
-              Predictions for LoL esports teams
-            </h2>
-          </div>
-        </div>
-      ) : (
-        <div></div>
-      )}
+
+      {/* Text */}
+      <div className="flex flex-col items-center justify-center min-h-screen w-full">
+        <h1
+          className=" text-8xl font-bold mb-4 text-center"
+          style={{ zIndex: 1 }}
+        >
+          Global Power Ranking
+        </h1>
+        <h2
+          className="text-3xl font-semibold mb-2 text-center"
+          style={{ zIndex: 1 }}
+        >
+          Predictions for LoL esports teams
+        </h2>
+      </div>
     </div>
   );
 }
