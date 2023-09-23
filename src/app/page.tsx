@@ -28,9 +28,9 @@ export default function Home() {
   return (
     <div className="flex flex-col overflow-hidden relative">
       <AnimatePresence mode="sync">
-        <motion.img
+        <motion.div
           key={current}
-          src={images[current]}
+          //src={images[current]}
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: 0.3, scale: 1 }}
           exit={{ opacity: 0, scale: 0.9 }}
@@ -47,7 +47,9 @@ export default function Home() {
             objectFit: "cover",
             zIndex: -1,
           }}
-        />
+        >
+          <Image src={images[current]} alt="Image" fill priority />
+        </motion.div>
       </AnimatePresence>
       {/* Navbar */}
       <nav
