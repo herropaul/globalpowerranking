@@ -48,7 +48,15 @@ export default function Home() {
             zIndex: -1,
           }}
         >
-          <Image src={images[current]} alt="Image" fill priority />
+          <Image
+            src={images[current]}
+            alt="Image"
+            fill
+            priority
+            placeholder="blur"
+            blurDataURL="true"
+            quality={50}
+          />
         </motion.div>
       </AnimatePresence>
       {/* Navbar */}
