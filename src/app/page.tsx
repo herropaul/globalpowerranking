@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Navbar from "./components/Navbar";
 
 const imageStyle = {
   opacity: 0.9,
@@ -60,17 +61,7 @@ export default function Home() {
         </motion.div>
       </AnimatePresence>
       {/* Navbar */}
-      <nav
-        className="flex space-x-4 my-4 mx-10 w-full items-start"
-        style={{ zIndex: 1 }}
-      >
-        <Link href="/">
-          <Image src="/homeicon.svg" alt="Home Icon" width={30} height={35} />
-        </Link>
-        <button className="font-bold py-2 px-4 rounded">Tournaments</button>
-        <button className="font-bold py-2 px-4 rounded">Team Rankings</button>
-        <button className="font-bold py-2 px-4 rounded">Global Rankings</button>
-      </nav>
+      <Navbar />
 
       {/* Text */}
       <div className="flex flex-col items-center justify-center min-h-screen w-full">
