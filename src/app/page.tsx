@@ -61,7 +61,7 @@ export default function Home() {
         </motion.div>
       </AnimatePresence>
       {/* Navbar */}
-      <Navbar />
+      {/* <Navbar /> */}
 
       {/* Text */}
       <div className="flex flex-col items-center justify-center min-h-screen w-full">
