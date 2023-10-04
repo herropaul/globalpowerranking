@@ -38,7 +38,10 @@ export default function ComboBox() {
               onChange={(event) => setQuery(event.target.value)}
             />
             <div className="absolute inset-y-0 right-0 flex items-center pr-2">
-              <button className="px-2 py-2 mx-3 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
+              <button
+                //style={{ backgroundColor: "#00C8C8" }}
+                className="px-2 py-2 mx-3 font-bold text-white rounded bg-teal-500 hover:bg-teal-700 "
+              >
                 Submit
               </button>
               <Combobox.Button>
