@@ -2,6 +2,7 @@
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import { AnimatedBlob } from "@/components/AnimatedBlob";
+import ComboBox from "@/components/ComboBox";
 import React, { useState, useEffect } from "react";
 
 export default function Tournaments() {
@@ -12,7 +13,7 @@ export default function Tournaments() {
   }, []);
   return (
     <div
-      className="flex flex-col min-h-screen w-full relative z-0"
+      className="flex flex-col min-h-screen w-full relative z-0 overflow-hidden"
       style={{ backgroundColor: "#011562" }}
     >
       <Head>
@@ -20,6 +21,13 @@ export default function Tournaments() {
       </Head>
 
       <Navbar />
+
+      <div className="flex flex-col items-center justify-center my-auto w-full ">
+        <h1 className=" font-bold text-4xl md:text-7xl text-center mb-5">
+          Tournament Ranking Search
+        </h1>
+        <ComboBox />
+      </div>
 
       {isClient ? (
         <div className="items-center justify-center">
