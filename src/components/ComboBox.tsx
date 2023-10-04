@@ -2,7 +2,7 @@ import { Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 
-const teams = [
+const tournaments = [
   { id: 1, name: "2023 Worlds" },
   { id: 2, name: "2023 MSI" },
   { id: 3, name: "2022 Worlds" },
@@ -16,11 +16,11 @@ export default function ComboBox() {
   const [selected, setSelected] = useState("");
   const [query, setQuery] = useState("");
 
-  const filteredTeam =
+  const filteredTournament =
     query === ""
-      ? teams
-      : teams.filter((team) =>
-          team.name
+      ? tournaments
+      : tournaments.filter((tournament) =>
+          tournament.name
             .toLowerCase()
             .replace(/\s+/g, "")
             .includes(query.toLowerCase().replace(/\s+/g, ""))
@@ -34,7 +34,7 @@ export default function ComboBox() {
             <Combobox.Input
               className="w-full border-none py-2 pl-3 pr-10 text-base leading-5 text-gray-900 focus:ring-0 md:text-lg"
               placeholder="Select a tournament..."
-              displayValue={(team: any) => team.name}
+              displayValue={(tournament: any) => tournament.name}
               onChange={(event) => setQuery(event.target.value)}
             />
             <div className="absolute inset-y-0 right-0 flex items-center pr-2">
@@ -60,20 +60,20 @@ export default function ComboBox() {
             afterLeave={() => setQuery("")}
           >
             <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none md:text-sm">
-              {filteredTeam.length === 0 && query !== "" ? (
+              {filteredTournament.length === 0 && query !== "" ? (
                 <div className="relative cursor-default select-none py-2 px-4 text-gray-700">
                   Nothing found.
                 </div>
               ) : (
-                filteredTeam.map((team) => (
+                filteredTournament.map((tournament) => (
                   <Combobox.Option
-                    key={team.id}
+                    key={tournament.id}
                     className={({ active }) =>
                       `relative cursor-default select-none py-2 pl-10 pr-4 ${
                         active ? "bg-teal-600 text-white" : "text-gray-900"
                       }`
                     }
-                    value={team}
+                    value={tournament}
                   >
                     {({ selected, active }) => (
                       <>
@@ -82,7 +82,7 @@ export default function ComboBox() {
                             selected ? "font-medium" : "font-normal"
                           }`}
                         >
-                          {team.name}
+                          {tournament.name}
                         </span>
                         {selected ? (
                           <span
