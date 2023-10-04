@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import { AnimatedBlob } from "@/components/AnimatedBlob";
 import ComboBox from "@/components/ComboBox";
 import React, { useState, useEffect } from "react";
+import { DotWave } from "@uiball/loaders";
 
 export default function Tournaments() {
   const [isClient, setIsClient] = useState<boolean>(false);
@@ -69,7 +70,9 @@ export default function Tournaments() {
           />
         </div>
       ) : (
-        <div></div>
+        <>
+          <DotWave size={47} speed={1} color="white" />
+        </>
       )}
     </div>
   );
