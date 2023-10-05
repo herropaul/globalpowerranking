@@ -6,8 +6,24 @@
   html {
     @apply bg-background  text-white;
   }
-  body {
+  /* body {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
-  }
+  } */
+}
+
+.max-width {
+  @apply max-w-[1440px] mx-auto;
+}
+
+.padding-x {
+  @apply sm:px-16 px-6;
+}
+
+.padding-y {
+  @apply py-4;
+}
+
+.demo__text-container {
+  @apply flex flex-col items-start justify-start gap-y-2.5;
 }

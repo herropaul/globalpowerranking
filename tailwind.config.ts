@@ -11,6 +11,10 @@ const config: Config = {
       colors: {
         background: "#000000",
       },
+      fontFamily: {
+        "molend-regular": 'var(--font-molend-regular)',
+        "mark-medium": 'var(--font-mark-medium)',
+      }
     },
   },
   plugins: [],

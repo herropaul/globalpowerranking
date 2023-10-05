@@ -30,12 +30,50 @@
 
 import React from 'react'
 import AppBar from '@mui/material/AppBar';
-
+import { Box, Button, IconButton, Toolbar, Typography } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
+import Link from 'next/link';
 const Navbar = () => {
   return (
-    <AppBar position="fixed">
-
-    </AppBar>
+    <Box sx={{flexGrow: 1}}>
+      <AppBar position="fixed" sx={{background: 'transparent', boxShadow: 'none'}}>
+        <Toolbar>
+          <Link href="/">
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{mr: 2}}
+            >
+              <HomeIcon />
+            </IconButton>
+          </Link>
+          {/* <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
+            <Link href="/tournaments" >
+              Tournaments
+            </Link>
+          </Typography> */}
+          <Box sx={{ flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
+            <Link href="/tournaments">
+              <Button sx={{my: 2, color: 'white', display: 'block'}}>
+                Tournaments
+              </Button>
+            </Link>
+            <Link href="/">
+              <Button sx={{my: 2, color: 'white', display: 'block'}}>
+                Global Rankings
+              </Button>
+            </Link>
+            <Link href="/">
+              <Button sx={{my: 2, color: 'white', display: 'block'}}>
+                Team Rankings
+              </Button>
+            </Link>
+          </Box>
+        </Toolbar>
+      </AppBar>
+    </Box>
   )
 }
 
