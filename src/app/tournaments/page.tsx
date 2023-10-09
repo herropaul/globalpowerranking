@@ -6,8 +6,23 @@ import ComboBox from "@/components/ComboBox";
 import React, { useState, useEffect } from "react";
 import { DotWave } from "@uiball/loaders";
 
+const tournaments = [
+  { id: 1, name: "2023 Worlds" },
+  { id: 2, name: "2023 MSI" },
+  { id: 3, name: "2022 Worlds" },
+  { id: 4, name: "2022 MSI" },
+  { id: 5, name: "2021 Worlds" },
+  { id: 6, name: "2021 MSI" },
+  { id: 7, name: "2023 EMEA Championship" },
+];
+
 export default function Tournaments() {
   const [isClient, setIsClient] = useState<boolean>(false);
+
+  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+  //   e.preventDefault();
+  //   console.log(selectedItem);
+  // };
 
   useEffect(() => {
     setIsClient(true);
@@ -27,7 +42,16 @@ export default function Tournaments() {
         <h1 className=" font-bold text-4xl md:text-7xl text-center mb-5">
           Tournament Ranking Search
         </h1>
-        <ComboBox />
+        <form className="flex flex-row w-72 sm:w-5/6 justify-center ">
+          <ComboBox dataset={tournaments} />
+          <button
+            //style={{ backgroundColor: "#00C8C8" }}
+            className="px-2 py-2 mx-3 font-bold text-white rounded bg-teal-500 hover:bg-teal-700 "
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
       </div>
 
       {isClient ? (

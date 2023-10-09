@@ -2,25 +2,21 @@ import { Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 
-const tournaments = [
-  { id: 1, name: "2023 Worlds" },
-  { id: 2, name: "2023 MSI" },
-  { id: 3, name: "2022 Worlds" },
-  { id: 4, name: "2022 MSI" },
-  { id: 5, name: "2021 Worlds" },
-  { id: 6, name: "2021 MSI" },
-  { id: 7, name: "2023 EMEA Championship" },
-];
+type DataType = {
+  id: number;
+  name: string;
+  // add other properties as needed
+};
 
-export default function ComboBox() {
+export default function ComboBox({ dataset }: { dataset: DataType[] }) {
   const [selected, setSelected] = useState("");
   const [query, setQuery] = useState("");
 
-  const filteredTournament =
+  const filteredData =
     query === ""
-      ? tournaments
-      : tournaments.filter((tournament) =>
-          tournament.name
+      ? dataset
+      : dataset.filter((data) =>
+          data.name
             .toLowerCase()
             .replace(/\s+/g, "")
             .includes(query.toLowerCase().replace(/\s+/g, ""))
@@ -34,16 +30,10 @@ export default function ComboBox() {
             <Combobox.Input
               className="w-full border-none py-2 pl-3 pr-10 text-base leading-5 text-gray-900 focus:ring-0 md:text-lg"
               placeholder="Select a tournament..."
-              displayValue={(tournament: any) => tournament.name}
+              displayValue={(data: any) => data.name}
               onChange={(event) => setQuery(event.target.value)}
             />
             <div className="absolute inset-y-0 right-0 flex items-center pr-2">
-              <button
-                //style={{ backgroundColor: "#00C8C8" }}
-                className="px-2 py-2 mx-3 font-bold text-white rounded bg-teal-500 hover:bg-teal-700 "
-              >
-                Submit
-              </button>
               <Combobox.Button>
                 <ChevronUpDownIcon
                   className="h-5 w-5 text-gray-400"
@@ -60,20 +50,20 @@ export default function ComboBox() {
             afterLeave={() => setQuery("")}
           >
             <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none md:text-sm">
-              {filteredTournament.length === 0 && query !== "" ? (
+              {filteredData.length === 0 && query !== "" ? (
                 <div className="relative cursor-default select-none py-2 px-4 text-gray-700">
                   Nothing found.
                 </div>
               ) : (
-                filteredTournament.map((tournament) => (
+                filteredData.map((data) => (
                   <Combobox.Option
-                    key={tournament.id}
+                    key={data.id}
                     className={({ active }) =>
                       `relative cursor-default select-none py-2 pl-10 pr-4 ${
                         active ? "bg-teal-600 text-white" : "text-gray-900"
                       }`
                     }
-                    value={tournament}
+                    value={data}
                   >
                     {({ selected, active }) => (
                       <>
@@ -82,7 +72,7 @@ export default function ComboBox() {
                             selected ? "font-medium" : "font-normal"
                           }`}
                         >
-                          {tournament.name}
+                          {data.name}
                         </span>
                         {selected ? (
                           <span
