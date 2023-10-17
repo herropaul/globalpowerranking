@@ -39,7 +39,7 @@ export default function Tournaments() {
       {/* <Navbar /> */}
 
       <div className="flex flex-col items-center justify-center my-auto w-full ">
-        <h1 className=" font-bold text-4xl md:text-7xl text-center mb-5">
+        <h1 className="font-bold text-4xl md:text-7xl text-center mb-5 font-molend-regular">
           Tournament Ranking Search
         </h1>
         <form className="flex flex-row w-72 sm:w-5/6 justify-center ">

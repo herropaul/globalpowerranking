@@ -38,12 +38,12 @@ export default function NavBar() {
             </Link>
           </li>
           <li className="uppercase">
-            <Link href="/teamrankings" className="hover:text-blue-300">
+            <Link href="/team-rankings" className="hover:text-blue-300">
               Team Rankings
             </Link>
           </li>
           <li className="uppercase">
-            <Link href="/globalrankings" className="hover:text-blue-300">
+            <Link href="/global-rankings" className="hover:text-blue-300">
               Global Rankings
             </Link>
           </li>
