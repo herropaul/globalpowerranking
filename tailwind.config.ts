@@ -10,9 +10,27 @@ const config: Config = {
     extend: {
       colors: {
         background: "#000000",
+        transparent: 'transparent',
+        // 'blue': '#011562'
       },
+      fontFamily: {
+        "molend-regular": 'var(--font-molend-regular)',
+        "mark-medium": 'var(--font-mark-medium)',
+      }
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+
+  daisyui: {
+    themes: [
+      {
+        dark: {
+          ...require("daisyui/src/theming/themes")["[data-theme=dark]"],
+          "primary": "white",
+        }
+      }
+    ],
+    base: false,
+  }
 };
 export default config;

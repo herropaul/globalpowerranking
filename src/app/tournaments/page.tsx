@@ -36,7 +36,7 @@ export default function Tournaments() {
         <title>Tournaments</title>
       </Head>
 
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="flex flex-col items-center justify-center my-auto w-full ">
         <h1 className=" font-bold text-4xl md:text-7xl text-center mb-5">
