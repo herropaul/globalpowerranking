@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Navbar from "./components/Navbar";
+import Navbar from "@/components/Navbar";
 
 
 const molend_regular = localFont({
@@ -27,11 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${molend_regular.variable} ${mark_medium.variable}`}>
-      <body className="font-molend-regular">
+    <html lang="en" data-theme="dark" className={`${molend_regular.variable} ${mark_medium.variable}`}>
+      <body className="font-mark-medium">
         <Navbar />
         {children}
       </body>
     </html>
   );
 }
+

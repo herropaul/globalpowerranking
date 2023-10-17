@@ -3,6 +3,9 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { teamInfo } from "@/constants";
+import ReactPlayer from "react-player";
+import TeamMembers from "@/components/TeamMembers";
 
 const imageStyle = {
   opacity: 0.9,
@@ -64,32 +67,44 @@ export default function Home() {
         {/* Text */}
         <div className="flex flex-col text-center justify-center min-h-screen w-full">
           <h1
-            className="text-7xl font-bold mb-4"
+            className="text-7xl font-bold mb-4 font-molend-regular"
             style={{ zIndex: 1 }}
           >
             Global Power Ranking
           </h1>
           <h2
-            className="text-2xl font-semibold"
+            className="text-2xl font-semibold font-molend-regular"
             style={{ zIndex: 1 }}
           >
             Predictions for LoL esports teams
           </h2>
         </div>
       </div>
-
-      <div className="mt-12 padding-x padding-y max-width">
-        <div className="demo__text-container">
-          <h1 className="text-4xl font-mark-medium">
-              Demo
-          </h1>
-        </div>
-        <div className="demo__text-container">
-          <h1 className="text-4xl font-mark-medium">
-            Methodology
-          </h1>
-        </div>
-      </div>    
+          
+      <section style={{backgroundColor: "#011562"}}>
+        <div className="padding-x padding-y max-width">
+          <div className="flex flex-col">
+            <h2 className="text-5xl">
+                Demo
+            </h2>
+            <div className="mt-6 flex justify-center">
+              <ReactPlayer url="https://youtu.be/qLCf9HkTfHY" width={1280} height={720} controls={true} />
+            </div>
+          </div>
+          <div className="mt-6 flex flex-col">
+            <h2 className="py-5 text-5xl">
+              Methodology
+            </h2>
+            <p className="font-mark-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit molestie dictum. Proin eget suscipit nibh. Nullam molestie velit ut lectus semper, sed pulvinar nisl egestas. Aliquam est lacus, suscipit non varius at, tincidunt sit amet sem. Maecenas nulla ligula, ultrices id nisl eu, consectetur varius diam. Nulla ut ex odio. Curabitur blandit in lacus eget malesuada. Sed ac mauris blandit, congue nibh nec, sagittis ante. Phasellus posuere quam a est fermentum, at mollis odio porta. Curabitur commodo elit eu aliquam ornare. Donec imperdiet ornare erat, nec posuere lacus tristique nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis efficitur mattis nunc, at dictum ante tempus sed. Suspendisse varius ut eros vel blandit. Maecenas pulvinar nunc vulputate, feugiat justo sed, mollis odio.</p>
+          </div>
+          <div className="mt-6 flex flex-col">
+            <h2 className="flex text-5xl justify-center">
+              Team Members
+            </h2>
+            <TeamMembers teamInfo={teamInfo}/>
+          </div>
+        </div>    
+      </section>
     </main>
   );
 }

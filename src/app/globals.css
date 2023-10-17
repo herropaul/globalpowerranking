@@ -12,6 +12,7 @@
   } */
 }
 
+
 .max-width {
   @apply max-w-[1440px] mx-auto;
 }
@@ -26,4 +27,12 @@
 
 .demo__text-container {
   @apply flex flex-col items-start justify-start gap-y-2.5;
+}
+
+.demo__video {
+  @apply justify-end;
+}
+
+.team__members-container {
+  @apply flex flex-row items-start justify-start;
 }
