@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { teamInfo } from "@/constants";
 import ReactPlayer from "react-player";
 import TeamMembers from "@/components/TeamMembers";

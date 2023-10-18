@@ -1,10 +1,10 @@
 "use client";
 import Head from "next/head";
-import Navbar from "@/components/Navbar";
 import { AnimatedBlob } from "@/components/AnimatedBlob";
 import ComboBox from "@/components/ComboBox";
 import React, { useState, useEffect } from "react";
 import { DotWave } from "@uiball/loaders";
+
 
 const tournaments = [
   { id: 1, name: "2023 Worlds" },
@@ -35,8 +35,6 @@ export default function Tournaments() {
       <Head>
         <title>Tournaments</title>
       </Head>
-
-      {/* <Navbar /> */}
 
       <div className="flex flex-col items-center justify-center my-auto w-full ">
         <h1 className="font-bold text-4xl md:text-7xl text-center mb-5 font-molend-regular">
