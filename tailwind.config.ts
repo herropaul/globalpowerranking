@@ -11,7 +11,6 @@ const config: Config = {
       colors: {
         background: "#000000",
         transparent: 'transparent',
-        // 'blue': '#011562'
       },
       fontFamily: {
         "molend-regular": 'var(--font-molend-regular)',

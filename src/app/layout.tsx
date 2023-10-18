@@ -17,8 +17,12 @@ const mark_medium = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Global Power Rankings",
+  // title: "Global Power Rankings",
   description: "Generate predictions for LoL esports teams",
+  title: {
+    template: '%s | Global Power Rankings',
+    default: 'Global Power Rankings'
+  }
 };
 
 export default function RootLayout({

@@ -88,7 +88,7 @@ export default function Home() {
                 Demo
             </h2>
             <div className="mt-6 flex justify-center">
-              <ReactPlayer url="https://youtu.be/qLCf9HkTfHY" width={1280} height={720} controls={true} />
+              <ReactPlayer url="https://youtu.be/qLCf9HkTfHY" width={1280} height={720} controls={true}/>
             </div>
           </div>
           <div className="mt-6 flex flex-col">
