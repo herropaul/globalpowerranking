@@ -1,25 +1,43 @@
 "use client"
  
+import { Button } from "@/components/ui/button"
 import { ColumnDef } from "@tanstack/react-table"
+import { ArrowUpDown, MoreHorizontal } from "lucide-react"
 
 export type Team = {
-  id: string
+  // id: string
+  placement: number
   name: string
-  icon: string
-  score: number
+  // icon: string
+  wins: number
+  winrate: string
 }
  
 export const columns: ColumnDef<Team>[] = [
+  {
+    accessorKey: "placement",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="tblghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Placement
+          <ArrowUpDown className="ml-2 h-4 w-4"/>
+        </Button>
+      )
+    }
+  },
   {
     accessorKey: "name",
     header: "Team Name",
   },
   {
-    accessorKey: "icon",
-    header: "Team Icon",
+    accessorKey: "wins",
+    header: "Number of Wins",
   },
   {
-    accessorKey: "score",
-    header: "Score",
+    accessorKey: "winrate",
+    header: "Winrate",
   },
 ]

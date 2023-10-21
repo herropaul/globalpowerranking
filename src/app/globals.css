@@ -4,8 +4,8 @@
  
 @layer base {
   :root {
-    /* --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%; */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -28,6 +28,11 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
+    --table: 209 93% 95%;
+    --table-foreground: 231 76% 30%;
+    --table-foreground-darker: 208 82% 89%;
+    --table-accent: 232 6% 93%;
+
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
@@ -36,8 +41,9 @@
   }
  
   .dark {
-    /* --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%; */
+    /* --background: 222.2 84% 4.9%; */
+    --background: 0 0% 100%;
+    --foreground: 210 40% 98%;
  
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -66,11 +72,23 @@
   }
 }
  
-@layer base {
+/* @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
   }
+} */
+
+.max-width {
+  @apply max-w-[1440px] mx-auto;
+}
+
+.padding-x {
+  @apply sm:px-16 px-6;
+}
+
+.padding-y {
+  @apply py-4;
 }

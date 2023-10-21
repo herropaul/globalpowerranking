@@ -10,23 +10,77 @@ export const metadata : Metadata = {
 async function getData(): Promise<Team[]> {
   return [
     {
-      id: "1",
+      placement: 1,
       name: "TSM",
-      icon: "/",
-      score: 5
+      wins: 5,
+      winrate: "100%"
     },
     {
-      id: "2",
+      placement: 2,
       name: "CLG",
-      icon: "/",
-      score: 6
+      wins: 4,
+      winrate: "50%"
     },
     {
-      id: "3",
+      placement: 3,
       name: "C9",
-      icon: "/",
-      score: 7
+      wins: 3,
+      winrate: "25%"
     },
+    {
+      placement: 4,
+      name: "TSM",
+      wins: 5,
+      winrate: "100%"
+    },
+    {
+      placement: 5,
+      name: "CLG",
+      wins: 4,
+      winrate: "50%"
+    },
+    {
+      placement: 6,
+      name: "C9",
+      wins: 3,
+      winrate: "25%"
+    },
+    {
+      placement: 7,
+      name: "TSM",
+      wins: 5,
+      winrate: "100%"
+    },
+    {
+      placement: 8,
+      name: "CLG",
+      wins: 4,
+      winrate: "50%"
+    },
+    {
+      placement: 9,
+      name: "C9",
+      wins: 3,
+      winrate: "25%"
+    },
+    {
+      placement: 10,
+      name: "TSM",
+      wins: 5,
+      winrate: "100%"
+    },
+    {
+      placement: 11,
+      name: "CLG",
+      wins: 4,
+      winrate: "50%"
+    },
+    {
+      placement: 12,
+      name: "C9",
+      wins: 3,
+      winrate: "25%"
+    }
   ]
 }
 
