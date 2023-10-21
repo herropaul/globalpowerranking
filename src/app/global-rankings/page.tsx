@@ -92,15 +92,15 @@ export default async function GlobalRankings() {
       style={{ backgroundColor: "#011562" }}
     >
 
-    <div className="flex items-center justify-center mt-20 w-full ">
-      <h1 className="font-bold text-4xl md:text-7xl text-center mb-5 font-molend-regular">
-        Global Rankings
-      </h1>
-    </div>
+      <div className="flex items-center justify-center mt-20 w-full ">
+        <h1 className="font-bold text-4xl md:text-7xl text-center mb-5 font-molend-regular">
+          Global Rankings
+        </h1>
+      </div>
 
-    <div className="container mx-auto py-10">
-      <DataTable columns={columns} data={data} />
-    </div>
+      <div className="container mx-auto py-10">
+        <DataTable columns={columns} data={data} />
+      </div>
 
     </div>
   )
