@@ -1,0 +1,172 @@
+[
+    {
+        "id": "1",
+        "name": "Weibo Gaming",
+        "ranking": 6,
+        "winrate": 63,
+        "winfrac": "10/16",
+        "acronym": "WBG",
+        "teamLogoURL": "/lol_team_logo/lpl/Weibo_Gaminglogo_square.png",
+        "league": "LPL"
+    },
+    {
+        "id": "2",
+        "name": "Ultra Prime",
+        "ranking": 14,
+        "winrate": 31,
+        "winfrac": "5/16",
+        "acronym": "UP",
+        "teamLogoURL": "/lol_team_logo/lpl/Ultra_Primelogo_square.png",
+        "league": "LPL"
+    },
+    {
+        "id": "3",
+        "name": "Thunder Talk Gaming",
+        "ranking": 13,
+        "winrate": 31,
+        "winfrac": "5/16",
+        "acronym": "TT",
+        "teamLogoURL": "/lol_team_logo/lpl/ThunderTalk_Gaminglogo_square.png",
+        "league": "LPL"
+    },
+    {
+        "id": "4",
+        "name": "Top Esports",
+        "ranking": 4,
+        "winrate": 75,
+        "winfrac": "12/16",
+        "acronym": "TES",
+        "teamLogoURL": "/lol_team_logo/lpl/Top_Esportslogo_square.png",
+        "league": "LPL"
+    },
+    {
+        "id": "5",
+        "name": "Team WE",
+        "ranking": 9,
+        "winrate": 44,
+        "winfrac": "7/16",
+        "acronym": "WE",
+        "teamLogoURL": "/lol_team_logo/lpl/Team_WElogo_square.png",
+        "league": "LPL"
+    },
+    {
+        "id": "6",
+        "name": "Royal Never Give Up",
+        "ranking": 7,
+        "winrate": 50,
+        "winfrac": "8/16",
+        "acronym": "RNG",
+        "teamLogoURL": "/lol_team_logo/lpl/Royal_Never_Give_Uplogo_square.png",
+        "league": "LPL"
+    },
+    {
+        "id": "7",
+        "name": "Rare Atom",
+        "ranking": 15,
+        "winrate": 25,
+        "winfrac": "4/16",
+        "acronym": "RA",
+        "teamLogoURL": "/lol_team_logo/lpl/Rare_Atomlogo_square.png",
+        "league": "LPL"
+    },
+    {
+        "id": "8",
+        "name": "Oh My God",
+        "ranking": 5,
+        "winrate": 69,
+        "winfrac": "11/16",
+        "acronym": "OMG",
+        "teamLogoURL": "/lol_team_logo/lpl/Oh_My_Godlogo_square.png",
+        "league": "LPL"
+    },
+    {
+        "id": "9",
+        "name": "Ninjas In Pyjamas",
+        "ranking": 10,
+        "winrate": 44,
+        "winfrac": "7/16",
+        "acronym": "NiP",
+        "teamLogoURL": "/lol_team_logo/lpl/Ninjas_in_Pyjamaslogo_square.png",
+        "league": "LPL"
+    },
+    {
+        "id": "10",
+        "name": "LNG Esports",
+        "ranking": 3,
+        "winrate": 75,
+        "winfrac": "12/16",
+        "acronym": "LNG",
+        "teamLogoURL": "/lol_team_logo/lpl/LNG_Esportslogo_square.png",
+        "league": "LPL"
+    },
+    {
+        "id": "11",
+        "name": "LGD Gaming",
+        "ranking": 17,
+        "winrate": 13,
+        "winfrac": "2/16",
+        "acronym": "LGD",
+        "teamLogoURL": "/lol_team_logo/lpl/LGD_Gaminglogo_square.png",
+        "league": "LPL"
+    },
+    {
+        "id": "12",
+        "name": "JD Gaming",
+        "ranking": 2,
+        "winrate": 88,
+        "winfrac": "14/16",
+        "acronym": "JDG",
+        "teamLogoURL": "/lol_team_logo/lpl/JD_Gaminglogo_square.png",
+        "league": "LPL"
+    },
+    {
+        "id": "13",
+        "name": "Funplus Phoenix",
+        "ranking": 11,
+        "winrate": 38,
+        "winfrac": "6/16",
+        "acronym": "FPX",
+        "teamLogoURL": "/lol_team_logo/lpl/FunPlus_Phoenixlogo_square.png",
+        "league": "LPL"
+    },
+    {
+        "id": "14",
+        "name": "EDward Gaming",
+        "ranking": 8,
+        "winrate": 50,
+        "winfrac": "8/16",
+        "acronym": "EDG",
+        "teamLogoURL": "/lol_team_logo/lpl/EDward_Gaminglogo_square.png",
+        "league": "LPL"
+    },
+    {
+        "id": "15",
+        "name": "Bilibilli Gaming",
+        "ranking": 1,
+        "winrate": 94,
+        "winfrac": "15/16",
+        "acronym": "BLG",
+        "teamLogoURL": "/lol_team_logo/lpl/Bilibili_Gaminglogo_square.png",
+        "league": "LPL"
+    },
+    {
+        "id": "16",
+        "name": "Anyone's Legend",
+        "ranking": 16,
+        "winrate": 25,
+        "winfrac": "4/16",
+        "acronym": "AL",
+        "teamLogoURL": "/lol_team_logo/lpl/Anyones_Legendlogo_square.png",
+        "league": "LPL"
+    },
+    {
+        "id": "17",
+        "name": "Invictus Gaming",
+        "ranking": 12,
+        "winrate": 38,
+        "winfrac": "6/16",
+        "acronym": "IG",
+        "teamLogoURL": "/lol_team_logo/lpl/Invictus_Gaminglogo_square.png",
+        "league": "LPL"
+    }
+]
