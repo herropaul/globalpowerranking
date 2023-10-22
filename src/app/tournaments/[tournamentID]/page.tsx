@@ -1,25 +1,46 @@
 "use client";
-
-import React, { useEffect, useState } from "react";
 import { Metadata } from "next";
-import { columns } from "../../components/columns";
-import { DataTable } from "../../components/data-table";
-import data from "../../../globalRankings.json";
-
+import { useEffect, useState } from "react";
 import { AnimatedBlob } from "@/components/AnimatedBlob";
 import { DotWave } from "@uiball/loaders";
-import { sortByKey } from "../../utils/sortByArray";
+import { DataTable } from "@/components/data-table";
+import { columns } from "@/components/columns";
+import { sortByKey } from "@/utils/sortByArray";
+import { updateTeamData } from "@/utils/teamDataByTourney";
+import tourneys from "../../../../tourneys.json";
+import teams from "../../../../globalRankings.json";
+import { TourneysType } from "@/types/tourneys";
 
 export const metadata: Metadata = {
-  title: "Global Rankings",
+  title: "Tournament Rankings",
 };
 
-export default function GlobalRankings() {
+
+export default function TournamentRankings({ params }: any) {
   const [isClient, setIsClient] = useState<boolean>(false);
+
+  const tournament = Object.values(tourneys).find(
+    (t) => t.tournament_id === params.tournamentID
+  );
+
+  const tournamentName = tournament
+    ? Object.keys(tourneys as TourneysType).find(
+        (key) =>
+          (tourneys as TourneysType)[key].tournament_id === params.tournamentID
+      ) || ""
+    : "";
+
+  const tournamentRegion = tournament ? tournament.region : "";
+
+  let data: any[] = [];
+  if (typeof params.tournamentID === "string") {
+    data = updateTeamData(params.tournamentID, tourneys, teams);
+  }
 
   useEffect(() => {
     setIsClient(true);
   }, []);
+
   return (
     <div
       className="flex flex-col min-h-screen w-full relative z-0 overflow-hidden"
@@ -27,7 +48,7 @@ export default function GlobalRankings() {
     >
       <div className="flex items-center justify-center mt-20 w-full ">
         <h1 className="font-bold text-4xl md:text-7xl text-center mb-5 font-molend-regular">
-          Global Rankings
+          Tournament Rankings: {tournamentName} - {tournamentRegion}
         </h1>
       </div>
 

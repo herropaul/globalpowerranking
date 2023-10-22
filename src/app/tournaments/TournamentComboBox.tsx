@@ -2,6 +2,7 @@ import { Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 
+
 type TeamData = {
   name: string;
   winrate: number;
@@ -16,10 +17,19 @@ type TournamentData = {
 
 type Tournaments = Record<string, TournamentData>;
 
-export default function ComboBox({ dataset }: { dataset: Tournaments }) {
+type ComboBoxProps = {
+  dataset: Tournaments;
+  onTournamentSelected: React.Dispatch<React.SetStateAction<string | null>>;
+};
+
+export default function ComboBox({ dataset, onTournamentSelected }: ComboBoxProps) {
   const [selected, setSelected] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("");
+
+  const handleSelection = (tournamentID : string) => {
+    onTournamentSelected(tournamentID);
+  };
 
   const tournamentsArray = Object.keys(dataset).map((key) => ({
     name: key,
@@ -39,6 +49,9 @@ export default function ComboBox({ dataset }: { dataset: Tournaments }) {
 
     return matchesQuery && matchesRegion;
   });
+
+
+
   return (
     <div className="flex w-full sm:w-5/6 ">
       <Combobox value={selected} onChange={setSelected}>
@@ -113,6 +126,7 @@ export default function ComboBox({ dataset }: { dataset: Tournaments }) {
                       }`
                     }
                     value={tournament.name}
+                    onClick={() => handleSelection(tournament.tournament_id)}
                   >
                     {({ selected, active }) => (
                       <>
