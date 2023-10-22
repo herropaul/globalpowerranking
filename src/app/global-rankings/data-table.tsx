@@ -1,9 +1,8 @@
-"use client"
- 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+"use client";
 
-import * as React from "react"
+import { Input } from "@/components/ui/input";
+
+import * as React from "react";
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -14,8 +13,8 @@ import {
   getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
-} from "@tanstack/react-table"
- 
+} from "@tanstack/react-table";
+
 import {
   Table,
   TableBody,
@@ -23,22 +22,23 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
- 
-import { DataTablePagination } from "@/components/data-table-pagination"
+} from "@/components/ui/table";
+
+import { DataTablePagination } from "@/components/data-table-pagination";
 
 interface DataTableProps<TData, TValue> {
-  columns: ColumnDef<TData, TValue>[]
-  data: TData[]
+  columns: ColumnDef<TData, TValue>[];
+  data: TData[];
 }
- 
+
 export function DataTable<TData, TValue>({
   columns,
   data,
 }: DataTableProps<TData, TValue>) {
-  const [sorting, setSorting] = React.useState<SortingState>([])
-  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
-
+  const [sorting, setSorting] = React.useState<SortingState>([]);
+  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
+    []
+  );
 
   const table = useReactTable({
     data,
@@ -51,17 +51,17 @@ export function DataTable<TData, TValue>({
     getFilteredRowModel: getFilteredRowModel(),
     state: {
       sorting,
-      columnFilters
-    }
-  })
- 
+      columnFilters,
+    },
+  });
+
   return (
     <div>
       <div className="flex items-center py-4">
-        <Input 
+        <Input
           placeholder="Filter teams..."
           value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
-          onChange={(event) => 
+          onChange={(event) =>
             table.getColumn("name")?.setFilterValue(event.target.value)
           }
           className="max-w-sm text-table-foreground"
@@ -82,7 +82,7 @@ export function DataTable<TData, TValue>({
                             header.getContext()
                           )}
                     </TableHead>
-                  )
+                  );
                 })}
               </TableRow>
             ))}
@@ -96,14 +96,20 @@ export function DataTable<TData, TValue>({
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext()
+                      )}
                     </TableCell>
                   ))}
                 </TableRow>
               ))
             ) : (
               <TableRow>
-                <TableCell colSpan={columns.length} className="h-24 text-center">
+                <TableCell
+                  colSpan={columns.length}
+                  className="h-24 text-center"
+                >
                   No results.
                 </TableCell>
               </TableRow>
@@ -114,24 +120,6 @@ export function DataTable<TData, TValue>({
       <div className="flex items-center justify-end py-4">
         <DataTablePagination table={table} />
       </div>
-      {/* <div className="flex items-center justify-end space-x-2 py-4">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => table.previousPage()}
-          disabled={!table.getCanPreviousPage()}
-        >
-          Previous
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => table.nextPage()}
-          disabled={!table.getCanNextPage()}
-        >
-          Next
-        </Button>
-      </div> */}
     </div>
-  )
+  );
 }
