@@ -11,11 +11,6 @@ import tourneys from "../../../../tourneys.json";
 import teams from "../../../../globalRankings.json";
 import { TourneysType } from "@/types/tourneys";
 
-export const metadata: Metadata = {
-  title: "Tournament Rankings",
-};
-
-
 export default function TournamentRankings({ params }: any) {
   const [isClient, setIsClient] = useState<boolean>(false);
 

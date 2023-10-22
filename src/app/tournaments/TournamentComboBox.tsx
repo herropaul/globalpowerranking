@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
-
+import TeamRankings from "@/app/team-rankings/page";
 
 type TeamData = {
   name: string;
@@ -22,12 +22,15 @@ type ComboBoxProps = {
   onTournamentSelected: React.Dispatch<React.SetStateAction<string | null>>;
 };
 
-export default function ComboBox({ dataset, onTournamentSelected }: ComboBoxProps) {
+export default function ComboBox({
+  dataset,
+  onTournamentSelected,
+}: ComboBoxProps) {
   const [selected, setSelected] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("");
 
-  const handleSelection = (tournamentID : string) => {
+  const handleSelection = (tournamentID: string) => {
     onTournamentSelected(tournamentID);
   };
 
@@ -49,8 +52,6 @@ export default function ComboBox({ dataset, onTournamentSelected }: ComboBoxProp
 
     return matchesQuery && matchesRegion;
   });
-
-
 
   return (
     <div className="flex w-full sm:w-5/6 ">
@@ -92,7 +93,8 @@ export default function ComboBox({ dataset, onTournamentSelected }: ComboBoxProp
                     }`}
                     onClick={(e) => {
                       e.stopPropagation();
-                      setSelectedRegion(region);}}
+                      setSelectedRegion(region);
+                    }}
                   >
                     {region}
                   </button>
