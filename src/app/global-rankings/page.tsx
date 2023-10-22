@@ -8,6 +8,7 @@ import data from '../../../globalRankings.json'
 
 import { AnimatedBlob } from "@/components/AnimatedBlob";
 import { DotWave } from "@uiball/loaders";
+import { sortByKey } from "../../utils/sortByArray"
 
 
 export const metadata : Metadata = {
@@ -33,7 +34,7 @@ export default function GlobalRankings() {
       </div>
 
       <div className="container mx-auto py-10">
-        <DataTable columns={columns} data={data} />
+        <DataTable columns={columns} data={sortByKey(data, "ranking")} />
       </div>
 
       {isClient ? (

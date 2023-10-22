@@ -31,7 +31,17 @@ export const columns: ColumnDef<Team>[] = [
   },
   {
     accessorKey: "name",
-    header: "Team Name",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="tblghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Team Name
+          <ArrowUpDown className="ml-2 h-4 w-4"/>
+        </Button>
+      )
+    },
     cell: tableProps => (
       <div className="flex">
         <Image src={tableProps.row.original.teamLogoURL} width={40} height={30} alt="team logo"/>
