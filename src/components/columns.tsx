@@ -12,6 +12,10 @@ export type Team = {
   teamLogoURL: string
   winrate: number
   winfrac: string
+  score: string
+  league_name: string
+  region: string
+  acronym: string
 }
  
 export const columns: ColumnDef<Team>[] = [

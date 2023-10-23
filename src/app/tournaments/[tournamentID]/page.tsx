@@ -1,50 +1,54 @@
 "use client";
-import Head from "next/head";
+import { Metadata } from "next";
+import { useEffect, useState } from "react";
 import { AnimatedBlob } from "@/components/AnimatedBlob";
-import React, { useState, useEffect } from "react";
 import { DotWave } from "@uiball/loaders";
-import teamData from "../../../globalRankings.json";
-import { useRouter } from "next/navigation";
-import ComboBox from "./TeamComboBox";
+import { DataTable } from "@/components/data-table";
+import { columns } from "@/components/columns";
+import { sortByKey } from "@/utils/sortByArray";
+import { updateTeamData } from "@/utils/teamDataByTourney";
+import tourneys from "../../../../tourneys.json";
+import teams from "../../../../globalRankings.json";
+import { TourneysType } from "@/types/tourneys";
 
-export default function TeamRankings() {
+export default function TournamentRankings({ params }: any) {
   const [isClient, setIsClient] = useState<boolean>(false);
-  const [selectedTeams, setSelectedTeams] = useState<string[] | null>([]);
-  const router = useRouter();
+
+  const tournament = Object.values(tourneys).find(
+    (t) => t.tournament_id === params.tournamentID
+  );
+
+  const tournamentName = tournament
+    ? Object.keys(tourneys as TourneysType).find(
+        (key) =>
+          (tourneys as TourneysType)[key].tournament_id === params.tournamentID
+      ) || ""
+    : "";
+
+  const tournamentRegion = tournament ? tournament.region : "";
+
+  let data: any[] = [];
+  if (typeof params.tournamentID === "string") {
+    data = updateTeamData(params.tournamentID, tourneys, teams);
+  }
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
-    e.preventDefault(); // Prevent the default form submission.
-    if (selectedTeams) {
-      const encodedTeams = btoa(selectedTeams.join(","));
-      router.push(`/team-rankings/${encodedTeams}`);
-    }
-  };
   return (
     <div
       className="flex flex-col min-h-screen w-full relative z-0 overflow-hidden"
       style={{ backgroundColor: "#011562" }}
     >
-      <Head>
-        <title>Team Ranking</title>
-      </Head>
-
-      <div className="flex flex-col items-center justify-center my-auto w-full ">
+      <div className="flex items-center justify-center mt-20 w-full ">
         <h1 className="font-bold text-4xl md:text-7xl text-center mb-5 font-molend-regular">
-          Team Ranking Search
+          Tournament Rankings: {tournamentName} - {tournamentRegion}
         </h1>
-        <form
-          className="flex flex-row w-72 sm:w-5/6 justify-center"
-          onSubmit={handleSubmit}
-        >
-          <ComboBox
-            dataset={teamData}
-            onTeamSelected={setSelectedTeams}
-          />
-        </form>
+      </div>
+
+      <div className="container mx-auto py-10">
+        <DataTable columns={columns} data={sortByKey(data, "ranking")} />
       </div>
 
       {isClient ? (

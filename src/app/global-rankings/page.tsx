@@ -1,32 +1,30 @@
 "use client";
 
-import React, { useEffect, useState } from 'react'
-import { Metadata } from 'next'
-import { columns } from './columns'
-import { DataTable } from './data-table'
-import data from '../../../globalRankings.json'
+import React, { useEffect, useState } from "react";
+import { Metadata } from "next";
+import { columns } from "../../components/columns";
+import { DataTable } from "../../components/data-table";
+import data from "../../../globalRankings.json";
 
 import { AnimatedBlob } from "@/components/AnimatedBlob";
 import { DotWave } from "@uiball/loaders";
-import { sortByKey } from "../../utils/sortByArray"
+import { sortByKey } from "../../utils/sortByArray";
 
-
-export const metadata : Metadata = {
-    title: 'Global Rankings',
-}
+export const metadata: Metadata = {
+  title: "Global Rankings",
+};
 
 export default function GlobalRankings() {
   const [isClient, setIsClient] = useState<boolean>(false);
-
 
   useEffect(() => {
     setIsClient(true);
   }, []);
   return (
-    <div className="flex flex-col min-h-screen w-full relative z-0 overflow-hidden"
+    <div
+      className="flex flex-col min-h-screen w-full relative z-0 overflow-hidden"
       style={{ backgroundColor: "#011562" }}
     >
-
       <div className="flex items-center justify-center mt-20 w-full ">
         <h1 className="font-bold text-4xl md:text-7xl text-center mb-5 font-molend-regular">
           Global Rankings
@@ -81,7 +79,6 @@ export default function GlobalRankings() {
           <DotWave size={47} speed={1} color="white" />
         </>
       )}
-
     </div>
-  )
+  );
 }

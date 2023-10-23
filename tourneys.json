@@ -1,0 +1,1658 @@
+{
+    "Regional Finals 2023": {
+        "tournament_id": "110825936250664572",
+        "region": "CHINA",
+        "teams": {
+            "99566404853058754": {
+                "name": "WeiboGaming FAW AUDI",
+                "winrate": 1.0,
+                "winfrac": "6 / 6"
+            },
+            "99566404850008779": {
+                "name": "Suzhou LNG Esports",
+                "winrate": 0.6666666666666666,
+                "winfrac": "4 / 6"
+            },
+            "99566404854685458": {
+                "name": "TOP ESPORTS",
+                "winrate": 0.3333333333333333,
+                "winfrac": "2 / 6"
+            },
+            "98767991882270868": {
+                "name": "SHANGHAI EDWARD GAMING HYCAN",
+                "winrate": 0.0,
+                "winfrac": "0 / 6"
+            }
+        }
+    },
+    "Summer 2023": {
+        "tournament_id": "110423696147088301",
+        "region": "HONG KONG, MACAU, TAIWAN",
+        "teams": {
+            "107700199633958891": {
+                "name": "CTBC Flying Oyster",
+                "winrate": 1.0,
+                "winfrac": "18 / 18"
+            },
+            "107700204561086446": {
+                "name": "Deep Cross Gaming",
+                "winrate": 0.8333333333333334,
+                "winfrac": "15 / 18"
+            },
+            "107760667929003738": {
+                "name": "Frank Esports",
+                "winrate": 0.7777777777777778,
+                "winfrac": "14 / 18"
+            },
+            "106269804045322803": {
+                "name": "Beyond Gaming",
+                "winrate": 0.6666666666666666,
+                "winfrac": "12 / 18"
+            },
+            "104367068120825486": {
+                "name": "PSG Talon",
+                "winrate": 0.5555555555555556,
+                "winfrac": "10 / 18"
+            },
+            "99566406490127625": {
+                "name": "J Team",
+                "winrate": 0.5,
+                "winfrac": "9 / 18"
+            },
+            "106269859169658575": {
+                "name": "Impunity Esports",
+                "winrate": 0.3333333333333333,
+                "winfrac": "6 / 18"
+            },
+            "109692071893352727": {
+                "name": "Hell Pigs",
+                "winrate": 0.2222222222222222,
+                "winfrac": "4 / 18"
+            },
+            "108517492697602721": {
+                "name": "Dewish Team",
+                "winrate": 0.1111111111111111,
+                "winfrac": "2 / 18"
+            },
+            "109692074894483834": {
+                "name": "West Point Esports",
+                "winrate": 0.0,
+                "winfrac": "0 / 18"
+            }
+        }
+    },
+    "Closing 2023": {
+        "tournament_id": "110411420269584926",
+        "region": "LATIN AMERICA",
+        "teams": {
+            "104841890701948065": {
+                "name": "Estral Esports",
+                "winrate": 0.9285714285714286,
+                "winfrac": "13 / 14"
+            },
+            "99566408562477641": {
+                "name": "INFINITY",
+                "winrate": 0.7857142857142857,
+                "winfrac": "11 / 14"
+            },
+            "107581284487120142": {
+                "name": "Six Karma",
+                "winrate": 0.7857142857142857,
+                "winfrac": "11 / 14"
+            },
+            "99566408358330419": {
+                "name": "Isurus",
+                "winrate": 0.6428571428571429,
+                "winfrac": "9 / 14"
+            },
+            "98767991935149427": {
+                "name": "Movistar R7",
+                "winrate": 0.42857142857142855,
+                "winfrac": "6 / 14"
+            },
+            "106806773698472633": {
+                "name": "Team Aze",
+                "winrate": 0.21428571428571427,
+                "winfrac": "3 / 14"
+            },
+            "101383792559569368": {
+                "name": "All Knights",
+                "winrate": 0.21428571428571427,
+                "winfrac": "3 / 14"
+            },
+            "107598699275015260": {
+                "name": "Leviat\u00e1n Esports",
+                "winrate": 0.0,
+                "winfrac": "0 / 14"
+            }
+        }
+    },
+    "PCS Spring 2022": {
+        "tournament_id": "107693721179065689",
+        "region": "HONG KONG, MACAU, TAIWAN",
+        "teams": {
+            "104367068120825486": {
+                "name": "PSG Talon",
+                "winrate": 0.9444444444444444,
+                "winfrac": "17 / 18"
+            },
+            "106269804045322803": {
+                "name": "Beyond Gaming",
+                "winrate": 0.8888888888888888,
+                "winfrac": "16 / 18"
+            },
+            "99566406490127625": {
+                "name": "J Team",
+                "winrate": 0.8333333333333334,
+                "winfrac": "15 / 18"
+            },
+            "106269859169658575": {
+                "name": "Impunity Esports",
+                "winrate": 0.6666666666666666,
+                "winfrac": "12 / 18"
+            },
+            "107700199633958891": {
+                "name": "CTBC Flying Oyster",
+                "winrate": 0.2777777777777778,
+                "winfrac": "5 / 18"
+            },
+            "107700208463820785": {
+                "name": "Hurricane Gaming",
+                "winrate": 0.2777777777777778,
+                "winfrac": "5 / 18"
+            },
+            "107700204561086446": {
+                "name": "Deep Cross Gaming",
+                "winrate": 0.2777777777777778,
+                "winfrac": "5 / 18"
+            },
+            "107700211633200412": {
+                "name": "Meta Falcon Team",
+                "winrate": 0.2777777777777778,
+                "winfrac": "5 / 18"
+            },
+            "107760667929003738": {
+                "name": "Frank Esports",
+                "winrate": 0.2777777777777778,
+                "winfrac": "5 / 18"
+            },
+            "107635420167535818": {
+                "name": "SEM9",
+                "winrate": 0.2777777777777778,
+                "winfrac": "5 / 18"
+            }
+        }
+    },
+    "LCK Summer 2022": {
+        "tournament_id": "108195478954601542",
+        "region": "KOREA",
+        "teams": {
+            "98767991853197861": {
+                "name": "T1",
+                "winrate": 1.0,
+                "winfrac": "18 / 18"
+            },
+            "100725845018863243": {
+                "name": "Dplus Kia",
+                "winrate": 0.8888888888888888,
+                "winfrac": "16 / 18"
+            },
+            "100205573495116443": {
+                "name": "Gen.G",
+                "winrate": 0.7777777777777778,
+                "winfrac": "14 / 18"
+            },
+            "99566404581868574": {
+                "name": "Kwangdong Freecs",
+                "winrate": 0.5,
+                "winfrac": "9 / 18"
+            },
+            "99566404585387054": {
+                "name": "DRX",
+                "winrate": 0.4444444444444444,
+                "winfrac": "8 / 18"
+            },
+            "105505619546859895": {
+                "name": "OKSavingsBank BRION",
+                "winrate": 0.3888888888888889,
+                "winfrac": "7 / 18"
+            },
+            "99566404579461230": {
+                "name": "kt Rolster",
+                "winrate": 0.3888888888888889,
+                "winfrac": "7 / 18"
+            },
+            "100205573496804586": {
+                "name": "Hanwha Life Esports",
+                "winrate": 0.3333333333333333,
+                "winfrac": "6 / 18"
+            },
+            "102747101565183056": {
+                "name": "NongShim REDFORCE",
+                "winrate": 0.2777777777777778,
+                "winfrac": "5 / 18"
+            },
+            "100725845022060229": {
+                "name": "Liiv SANDBOX",
+                "winrate": 0.0,
+                "winfrac": "0 / 18"
+            }
+        }
+    },
+    "LEC Spring 2022": {
+        "tournament_id": "107417059262120466",
+        "region": "EMEA",
+        "teams": {
+            "103461966965149786": {
+                "name": "MAD Lions",
+                "winrate": 1.0,
+                "winfrac": "18 / 18"
+            },
+            "101383793574360315": {
+                "name": "KOI",
+                "winrate": 0.8888888888888888,
+                "winfrac": "16 / 18"
+            },
+            "98767991926151025": {
+                "name": "G2 Esports",
+                "winrate": 0.7222222222222222,
+                "winfrac": "13 / 18"
+            },
+            "98767991940181526": {
+                "name": "Misfits Gaming",
+                "winrate": 0.6666666666666666,
+                "winfrac": "12 / 18"
+            },
+            "98767991866488695": {
+                "name": "Fnatic",
+                "winrate": 0.6111111111111112,
+                "winfrac": "11 / 18"
+            },
+            "99322214695067838": {
+                "name": "Team Vitality",
+                "winrate": 0.3888888888888889,
+                "winfrac": "7 / 18"
+            },
+            "101383793572656373": {
+                "name": "EXCEL",
+                "winrate": 0.3333333333333333,
+                "winfrac": "6 / 18"
+            },
+            "101383793567806688": {
+                "name": "SK Gaming",
+                "winrate": 0.2222222222222222,
+                "winfrac": "4 / 18"
+            },
+            "101383793569248484": {
+                "name": "Astralis",
+                "winrate": 0.16666666666666666,
+                "winfrac": "3 / 18"
+            },
+            "107563714667537640": {
+                "name": "Team BDS",
+                "winrate": 0.0,
+                "winfrac": "0 / 18"
+            }
+        }
+    },
+    "MSI 2022": {
+        "tournament_id": "107905284983470149",
+        "region": "INTERNATIONAL",
+        "teams": {
+            "98767991853197861": {
+                "name": "T1",
+                "winrate": 0.95,
+                "winfrac": "19 / 20"
+            },
+            "98767991892579754": {
+                "name": "Royal Never Give Up",
+                "winrate": 0.9,
+                "winfrac": "18 / 20"
+            },
+            "98767991926151025": {
+                "name": "G2 Esports",
+                "winrate": 0.8,
+                "winfrac": "16 / 20"
+            },
+            "103461966951059521": {
+                "name": "Evil Geniuses LG",
+                "winrate": 0.7,
+                "winfrac": "14 / 20"
+            },
+            "104367068120825486": {
+                "name": "PSG Talon",
+                "winrate": 0.55,
+                "winfrac": "11 / 20"
+            },
+            "102235771678061291": {
+                "name": "DenizBank \u0130stanbul Wildcats",
+                "winrate": 0.5,
+                "winfrac": "10 / 20"
+            },
+            "107251245690956393": {
+                "name": "Saigon Buffalo Esports",
+                "winrate": 0.4,
+                "winfrac": "8 / 20"
+            },
+            "100285330168091787": {
+                "name": "DetonatioN FocusMe",
+                "winrate": 0.35,
+                "winfrac": "7 / 20"
+            },
+            "99566408221961358": {
+                "name": "RED Kalunga",
+                "winrate": 0.25,
+                "winfrac": "5 / 20"
+            },
+            "106806773698472633": {
+                "name": "Team Aze",
+                "winrate": 0.1,
+                "winfrac": "2 / 20"
+            },
+            "99566406338282437": {
+                "name": "ORDER",
+                "winrate": 0.0,
+                "winfrac": "0 / 20"
+            }
+        }
+    },
+    "LCS Summer 2022": {
+        "tournament_id": "108206581962155974",
+        "region": "NORTH AMERICA",
+        "teams": {
+            "103461966951059521": {
+                "name": "Evil Geniuses LG",
+                "winrate": 1.0,
+                "winfrac": "18 / 18"
+            },
+            "98926509885559666": {
+                "name": "Team Liquid Honda",
+                "winrate": 0.8888888888888888,
+                "winfrac": "16 / 18"
+            },
+            "99294153828264740": {
+                "name": "100 Thieves",
+                "winrate": 0.7777777777777778,
+                "winfrac": "14 / 18"
+            },
+            "98767991877340524": {
+                "name": "Cloud9",
+                "winrate": 0.6666666666666666,
+                "winfrac": "12 / 18"
+            },
+            "98767991860392497": {
+                "name": "TSM",
+                "winrate": 0.5,
+                "winfrac": "9 / 18"
+            },
+            "98926509883054987": {
+                "name": "Dignitas",
+                "winrate": 0.3888888888888889,
+                "winfrac": "7 / 18"
+            },
+            "98926509892121852": {
+                "name": "FlyQuest",
+                "winrate": 0.3333333333333333,
+                "winfrac": "6 / 18"
+            },
+            "99294153824386385": {
+                "name": "Golden Guardians",
+                "winrate": 0.2777777777777778,
+                "winfrac": "5 / 18"
+            },
+            "98926509884398584": {
+                "name": "CLG",
+                "winrate": 0.1111111111111111,
+                "winfrac": "2 / 18"
+            },
+            "98767991930907107": {
+                "name": "Immortals Progressive",
+                "winrate": 0.05555555555555555,
+                "winfrac": "1 / 18"
+            }
+        }
+    },
+    "LCS Lock In 2022": {
+        "tournament_id": "107458335260330212",
+        "region": "NORTH AMERICA",
+        "teams": {
+            "98926509885559666": {
+                "name": "Team Liquid Honda",
+                "winrate": 0.9444444444444444,
+                "winfrac": "17 / 18"
+            },
+            "99294153828264740": {
+                "name": "100 Thieves",
+                "winrate": 0.9444444444444444,
+                "winfrac": "17 / 18"
+            },
+            "98767991877340524": {
+                "name": "Cloud9",
+                "winrate": 0.7777777777777778,
+                "winfrac": "14 / 18"
+            },
+            "98767991860392497": {
+                "name": "TSM",
+                "winrate": 0.6111111111111112,
+                "winfrac": "11 / 18"
+            },
+            "103461966951059521": {
+                "name": "Evil Geniuses LG",
+                "winrate": 0.6111111111111112,
+                "winfrac": "11 / 18"
+            },
+            "98767991930907107": {
+                "name": "Immortals Progressive",
+                "winrate": 0.4444444444444444,
+                "winfrac": "8 / 18"
+            },
+            "98926509892121852": {
+                "name": "FlyQuest",
+                "winrate": 0.2222222222222222,
+                "winfrac": "4 / 18"
+            },
+            "99294153824386385": {
+                "name": "Golden Guardians",
+                "winrate": 0.2222222222222222,
+                "winfrac": "4 / 18"
+            },
+            "98926509883054987": {
+                "name": "Dignitas",
+                "winrate": 0.2222222222222222,
+                "winfrac": "4 / 18"
+            },
+            "98926509884398584": {
+                "name": "CLG",
+                "winrate": 0.0,
+                "winfrac": "0 / 18"
+            }
+        }
+    },
+    "PCS Summer 2022": {
+        "tournament_id": "108166997301178190",
+        "region": "HONG KONG, MACAU, TAIWAN",
+        "teams": {
+            "107700199633958891": {
+                "name": "CTBC Flying Oyster",
+                "winrate": 0.8888888888888888,
+                "winfrac": "16 / 18"
+            },
+            "104367068120825486": {
+                "name": "PSG Talon",
+                "winrate": 0.8333333333333334,
+                "winfrac": "15 / 18"
+            },
+            "99566406490127625": {
+                "name": "J Team",
+                "winrate": 0.7777777777777778,
+                "winfrac": "14 / 18"
+            },
+            "107700204561086446": {
+                "name": "Deep Cross Gaming",
+                "winrate": 0.7222222222222222,
+                "winfrac": "13 / 18"
+            },
+            "106269804045322803": {
+                "name": "Beyond Gaming",
+                "winrate": 0.6666666666666666,
+                "winfrac": "12 / 18"
+            },
+            "107760667929003738": {
+                "name": "Frank Esports",
+                "winrate": 0.4444444444444444,
+                "winfrac": "8 / 18"
+            },
+            "107700211633200412": {
+                "name": "Meta Falcon Team",
+                "winrate": 0.3333333333333333,
+                "winfrac": "6 / 18"
+            },
+            "106269859169658575": {
+                "name": "Impunity Esports",
+                "winrate": 0.2222222222222222,
+                "winfrac": "4 / 18"
+            },
+            "107635420167535818": {
+                "name": "SEM9",
+                "winrate": 0.1111111111111111,
+                "winfrac": "2 / 18"
+            },
+            "108517492697602721": {
+                "name": "Dewish Team",
+                "winrate": 0.0,
+                "winfrac": "0 / 18"
+            }
+        }
+    },
+    "LJL Summer 2022": {
+        "tournament_id": "108231751506773283",
+        "region": "JAPAN",
+        "teams": {
+            "101428372600307248": {
+                "name": "Rascal Jester",
+                "winrate": 1.0,
+                "winfrac": "14 / 14"
+            },
+            "100285330168091787": {
+                "name": "DetonatioN FocusMe",
+                "winrate": 0.7857142857142857,
+                "winfrac": "11 / 14"
+            },
+            "103535282119620510": {
+                "name": "Fukuoka SoftBank HAWKS gaming",
+                "winrate": 0.6428571428571429,
+                "winfrac": "9 / 14"
+            },
+            "101428372605353526": {
+                "name": "Sengoku Gaming",
+                "winrate": 0.5714285714285714,
+                "winfrac": "8 / 14"
+            },
+            "101428372598668846": {
+                "name": "Burning Core",
+                "winrate": 0.5714285714285714,
+                "winfrac": "8 / 14"
+            },
+            "101428372607057464": {
+                "name": "AXIZ",
+                "winrate": 0.2857142857142857,
+                "winfrac": "4 / 14"
+            },
+            "101428372602011186": {
+                "name": "V3 Esports",
+                "winrate": 0.07142857142857142,
+                "winfrac": "1 / 14"
+            },
+            "101428372603715124": {
+                "name": "Crest Gaming Act",
+                "winrate": 0.07142857142857142,
+                "winfrac": "1 / 14"
+            }
+        }
+    },
+    "Worlds 2022": {
+        "tournament_id": "108998961191900167",
+        "region": "INTERNATIONAL",
+        "teams": {
+            "100205573495116443": {
+                "name": "Gen.G",
+                "winrate": 0.9565217391304348,
+                "winfrac": "44 / 46"
+            },
+            "98767991892579754": {
+                "name": "Royal Never Give Up",
+                "winrate": 0.9565217391304348,
+                "winfrac": "44 / 46"
+            },
+            "98767991853197861": {
+                "name": "T1",
+                "winrate": 0.8913043478260869,
+                "winfrac": "41 / 46"
+            },
+            "100725845018863243": {
+                "name": "Dplus Kia",
+                "winrate": 0.8260869565217391,
+                "winfrac": "38 / 46"
+            },
+            "98767991882270868": {
+                "name": "SHANGHAI EDWARD GAMING HYCAN",
+                "winrate": 0.8043478260869565,
+                "winfrac": "37 / 46"
+            },
+            "98767991926151025": {
+                "name": "G2 Esports",
+                "winrate": 0.7391304347826086,
+                "winfrac": "34 / 46"
+            },
+            "98767991877340524": {
+                "name": "Cloud9",
+                "winrate": 0.6739130434782609,
+                "winfrac": "31 / 46"
+            },
+            "107700199633958891": {
+                "name": "CTBC Flying Oyster",
+                "winrate": 0.6521739130434783,
+                "winfrac": "30 / 46"
+            },
+            "99566404585387054": {
+                "name": "DRX",
+                "winrate": 0.6304347826086957,
+                "winfrac": "29 / 46"
+            },
+            "101383793574360315": {
+                "name": "KOI",
+                "winrate": 0.6086956521739131,
+                "winfrac": "28 / 46"
+            },
+            "98767991954244555": {
+                "name": "GAM Esports",
+                "winrate": 0.6086956521739131,
+                "winfrac": "28 / 46"
+            },
+            "98767991866488695": {
+                "name": "Fnatic",
+                "winrate": 0.5869565217391305,
+                "winfrac": "27 / 46"
+            },
+            "103461966965149786": {
+                "name": "MAD Lions",
+                "winrate": 0.5,
+                "winfrac": "23 / 46"
+            },
+            "103461966951059521": {
+                "name": "Evil Geniuses LG",
+                "winrate": 0.43478260869565216,
+                "winfrac": "20 / 46"
+            },
+            "100285330168091787": {
+                "name": "DetonatioN FocusMe",
+                "winrate": 0.41304347826086957,
+                "winfrac": "19 / 46"
+            },
+            "99294153828264740": {
+                "name": "100 Thieves",
+                "winrate": 0.391304347826087,
+                "winfrac": "18 / 46"
+            },
+            "99566404854685458": {
+                "name": "TOP ESPORTS",
+                "winrate": 0.32608695652173914,
+                "winfrac": "15 / 46"
+            },
+            "106269804045322803": {
+                "name": "Beyond Gaming",
+                "winrate": 0.2826086956521739,
+                "winfrac": "13 / 46"
+            },
+            "102235771678061291": {
+                "name": "DenizBank \u0130stanbul Wildcats",
+                "winrate": 0.2391304347826087,
+                "winfrac": "11 / 46"
+            },
+            "99566404852189289": {
+                "name": "Beijing JDG Intel Esports Club",
+                "winrate": 0.17391304347826086,
+                "winfrac": "8 / 46"
+            },
+            "105397404796640412": {
+                "name": "LOUD",
+                "winrate": 0.15217391304347827,
+                "winfrac": "7 / 46"
+            },
+            "99566408358330419": {
+                "name": "Isurus",
+                "winrate": 0.10869565217391304,
+                "winfrac": "5 / 46"
+            },
+            "107251245690956393": {
+                "name": "Saigon Buffalo Esports",
+                "winrate": 0.043478260869565216,
+                "winfrac": "2 / 46"
+            },
+            "99566406332987990": {
+                "name": "The Chiefs",
+                "winrate": 0.0,
+                "winfrac": "0 / 46"
+            }
+        }
+    },
+    "LCK Regional Finals 2022": {
+        "tournament_id": "108797577868041021",
+        "region": "KOREA",
+        "teams": {
+            "100725845018863243": {
+                "name": "Dplus Kia",
+                "winrate": 1.0,
+                "winfrac": "6 / 6"
+            },
+            "99566404579461230": {
+                "name": "kt Rolster",
+                "winrate": 0.6666666666666666,
+                "winfrac": "4 / 6"
+            },
+            "100725845022060229": {
+                "name": "Liiv SANDBOX",
+                "winrate": 0.16666666666666666,
+                "winfrac": "1 / 6"
+            },
+            "99566404585387054": {
+                "name": "DRX",
+                "winrate": 0.16666666666666666,
+                "winfrac": "1 / 6"
+            }
+        }
+    },
+    "Opening 2023": {
+        "tournament_id": "109672513958565698",
+        "region": "LATIN AMERICA",
+        "teams": {
+            "104841890701948065": {
+                "name": "Estral Esports",
+                "winrate": 1.0,
+                "winfrac": "14 / 14"
+            },
+            "98767991935149427": {
+                "name": "Movistar R7",
+                "winrate": 0.7142857142857143,
+                "winfrac": "10 / 14"
+            },
+            "99566408562477641": {
+                "name": "INFINITY",
+                "winrate": 0.6428571428571429,
+                "winfrac": "9 / 14"
+            },
+            "106806773698472633": {
+                "name": "Team Aze",
+                "winrate": 0.5714285714285714,
+                "winfrac": "8 / 14"
+            },
+            "107581287168722290": {
+                "name": "The Kings",
+                "winrate": 0.5714285714285714,
+                "winfrac": "8 / 14"
+            },
+            "99566408358330419": {
+                "name": "Isurus",
+                "winrate": 0.35714285714285715,
+                "winfrac": "5 / 14"
+            },
+            "101383792559569368": {
+                "name": "All Knights",
+                "winrate": 0.14285714285714285,
+                "winfrac": "2 / 14"
+            },
+            "107581284487120142": {
+                "name": "Six Karma",
+                "winrate": 0.0,
+                "winfrac": "0 / 14"
+            }
+        }
+    },
+    "LLA Promotion 2022": {
+        "tournament_id": "108916413227302339",
+        "region": "LATIN AMERICA",
+        "teams": {
+            "106806779752531762": {
+                "name": "Globant Emerald Team",
+                "winrate": 0.8333333333333334,
+                "winfrac": "5 / 6"
+            },
+            "99566408561605102": {
+                "name": "XTEN Esports",
+                "winrate": 0.8333333333333334,
+                "winfrac": "5 / 6"
+            },
+            "107582618156093368": {
+                "name": "Incubus",
+                "winrate": 0.16666666666666666,
+                "winfrac": "1 / 6"
+            },
+            "107581287168722290": {
+                "name": "The Kings",
+                "winrate": 0.16666666666666666,
+                "winfrac": "1 / 6"
+            }
+        }
+    },
+    "Playoffs - Summer 2023": {
+        "tournament_id": "110847340080101648",
+        "region": "HONG KONG, MACAU, TAIWAN",
+        "teams": {
+            "104367068120825486": {
+                "name": "PSG Talon",
+                "winrate": 1.0,
+                "winfrac": "14 / 14"
+            },
+            "99566406490127625": {
+                "name": "J Team",
+                "winrate": 0.7857142857142857,
+                "winfrac": "11 / 14"
+            },
+            "107700199633958891": {
+                "name": "CTBC Flying Oyster",
+                "winrate": 0.7142857142857143,
+                "winfrac": "10 / 14"
+            },
+            "107760667929003738": {
+                "name": "Frank Esports",
+                "winrate": 0.5714285714285714,
+                "winfrac": "8 / 14"
+            },
+            "106269804045322803": {
+                "name": "Beyond Gaming",
+                "winrate": 0.5,
+                "winfrac": "7 / 14"
+            },
+            "107700204561086446": {
+                "name": "Deep Cross Gaming",
+                "winrate": 0.2857142857142857,
+                "winfrac": "4 / 14"
+            },
+            "99566406332987990": {
+                "name": "The Chiefs",
+                "winrate": 0.14285714285714285,
+                "winfrac": "2 / 14"
+            },
+            "109675484017801229": {
+                "name": "Team Bliss",
+                "winrate": 0.0,
+                "winfrac": "0 / 14"
+            }
+        }
+    },
+    "CBLOL 2023 Split 2": {
+        "tournament_id": "110413046183015975",
+        "region": "BRAZIL",
+        "teams": {
+            "99566408217955692": {
+                "name": "paiN Gaming",
+                "winrate": 0.8333333333333334,
+                "winfrac": "15 / 18"
+            },
+            "105397404796640412": {
+                "name": "LOUD",
+                "winrate": 0.7777777777777778,
+                "winfrac": "14 / 18"
+            },
+            "109480204628225868": {
+                "name": "Los Grandes",
+                "winrate": 0.7777777777777778,
+                "winfrac": "14 / 18"
+            },
+            "100205576309502431": {
+                "name": "FURIA",
+                "winrate": 0.7222222222222222,
+                "winfrac": "13 / 18"
+            },
+            "99566408221961358": {
+                "name": "RED Kalunga",
+                "winrate": 0.7222222222222222,
+                "winfrac": "13 / 18"
+            },
+            "109480056092207899": {
+                "name": "FLUXO",
+                "winrate": 0.5,
+                "winfrac": "9 / 18"
+            },
+            "99566408221114231": {
+                "name": "KaBuM! Esports",
+                "winrate": 0.2777777777777778,
+                "winfrac": "5 / 18"
+            },
+            "99566408217116828": {
+                "name": "INTZ",
+                "winrate": 0.2222222222222222,
+                "winfrac": "4 / 18"
+            },
+            "99566408222831088": {
+                "name": "Liberty",
+                "winrate": 0.16666666666666666,
+                "winfrac": "3 / 18"
+            },
+            "99566408219409348": {
+                "name": "Vivo Keyd Stars",
+                "winrate": 0.0,
+                "winfrac": "0 / 18"
+            }
+        }
+    },
+    "MSI 2023": {
+        "tournament_id": "110198981276611770",
+        "region": "INTERNATIONAL",
+        "teams": {
+            "99566404852189289": {
+                "name": "Beijing JDG Intel Esports Club",
+                "winrate": 1.0,
+                "winfrac": "24 / 24"
+            },
+            "98767991853197861": {
+                "name": "T1",
+                "winrate": 0.8333333333333334,
+                "winfrac": "20 / 24"
+            },
+            "100205573495116443": {
+                "name": "Gen.G",
+                "winrate": 0.8333333333333334,
+                "winfrac": "20 / 24"
+            },
+            "98767991926151025": {
+                "name": "G2 Esports",
+                "winrate": 0.6666666666666666,
+                "winfrac": "16 / 24"
+            },
+            "100285330168091787": {
+                "name": "DetonatioN FocusMe",
+                "winrate": 0.6666666666666666,
+                "winfrac": "16 / 24"
+            },
+            "104367068120825486": {
+                "name": "PSG Talon",
+                "winrate": 0.5416666666666666,
+                "winfrac": "13 / 24"
+            },
+            "103461966965149786": {
+                "name": "MAD Lions",
+                "winrate": 0.5,
+                "winfrac": "12 / 24"
+            },
+            "98767991877340524": {
+                "name": "Cloud9",
+                "winrate": 0.5,
+                "winfrac": "12 / 24"
+            },
+            "105397404796640412": {
+                "name": "LOUD",
+                "winrate": 0.3333333333333333,
+                "winfrac": "8 / 24"
+            },
+            "99294153824386385": {
+                "name": "Golden Guardians",
+                "winrate": 0.3333333333333333,
+                "winfrac": "8 / 24"
+            },
+            "98767991954244555": {
+                "name": "GAM Esports",
+                "winrate": 0.20833333333333334,
+                "winfrac": "5 / 24"
+            },
+            "98767991935149427": {
+                "name": "Movistar R7",
+                "winrate": 0.08333333333333333,
+                "winfrac": "2 / 24"
+            },
+            "99566404853854212": {
+                "name": "Bilibili Gaming Pingan Bank",
+                "winrate": 0.0,
+                "winfrac": "0 / 24"
+            }
+        }
+    },
+    "Split 1 2023": {
+        "tournament_id": "109523641416750631",
+        "region": "BRAZIL",
+        "teams": {
+            "105397404796640412": {
+                "name": "LOUD",
+                "winrate": 0.9444444444444444,
+                "winfrac": "17 / 18"
+            },
+            "99566408221114231": {
+                "name": "KaBuM! Esports",
+                "winrate": 0.8888888888888888,
+                "winfrac": "16 / 18"
+            },
+            "99566408217955692": {
+                "name": "paiN Gaming",
+                "winrate": 0.7777777777777778,
+                "winfrac": "14 / 18"
+            },
+            "99566408221961358": {
+                "name": "RED Kalunga",
+                "winrate": 0.6666666666666666,
+                "winfrac": "12 / 18"
+            },
+            "100205576309502431": {
+                "name": "FURIA",
+                "winrate": 0.6111111111111112,
+                "winfrac": "11 / 18"
+            },
+            "99566408222831088": {
+                "name": "Liberty",
+                "winrate": 0.4444444444444444,
+                "winfrac": "8 / 18"
+            },
+            "99566408219409348": {
+                "name": "Vivo Keyd Stars",
+                "winrate": 0.2777777777777778,
+                "winfrac": "5 / 18"
+            },
+            "99566408217116828": {
+                "name": "INTZ",
+                "winrate": 0.2777777777777778,
+                "winfrac": "5 / 18"
+            },
+            "109480204628225868": {
+                "name": "Los Grandes",
+                "winrate": 0.05555555555555555,
+                "winfrac": "1 / 18"
+            },
+            "109480056092207899": {
+                "name": "FLUXO",
+                "winrate": 0.05555555555555555,
+                "winfrac": "1 / 18"
+            }
+        }
+    },
+    "LEC Summer 2022": {
+        "tournament_id": "108176672283976661",
+        "region": "EMEA",
+        "teams": {
+            "98767991926151025": {
+                "name": "G2 Esports",
+                "winrate": 1.0,
+                "winfrac": "18 / 18"
+            },
+            "98767991866488695": {
+                "name": "Fnatic",
+                "winrate": 0.8333333333333334,
+                "winfrac": "15 / 18"
+            },
+            "101383793574360315": {
+                "name": "KOI",
+                "winrate": 0.7777777777777778,
+                "winfrac": "14 / 18"
+            },
+            "103461966965149786": {
+                "name": "MAD Lions",
+                "winrate": 0.7222222222222222,
+                "winfrac": "13 / 18"
+            },
+            "98767991940181526": {
+                "name": "Misfits Gaming",
+                "winrate": 0.5,
+                "winfrac": "9 / 18"
+            },
+            "101383793572656373": {
+                "name": "EXCEL",
+                "winrate": 0.4444444444444444,
+                "winfrac": "8 / 18"
+            },
+            "99322214695067838": {
+                "name": "Team Vitality",
+                "winrate": 0.3888888888888889,
+                "winfrac": "7 / 18"
+            },
+            "101383793567806688": {
+                "name": "SK Gaming",
+                "winrate": 0.2222222222222222,
+                "winfrac": "4 / 18"
+            },
+            "101383793569248484": {
+                "name": "Astralis",
+                "winrate": 0.05555555555555555,
+                "winfrac": "1 / 18"
+            },
+            "107563714667537640": {
+                "name": "Team BDS",
+                "winrate": 0.05555555555555555,
+                "winfrac": "1 / 18"
+            }
+        }
+    },
+    "TCL Winter 2022": {
+        "tournament_id": "107566408953200568",
+        "region": "EMEA",
+        "teams": {
+            "99566406064558732": {
+                "name": "Papara SuperMassive ",
+                "winrate": 0.9444444444444444,
+                "winfrac": "17 / 18"
+            },
+            "99566406069969565": {
+                "name": "Info Yat\u0131r\u0131m Aurora",
+                "winrate": 0.8888888888888888,
+                "winfrac": "16 / 18"
+            },
+            "101422616509070746": {
+                "name": "Galatasaray Espor",
+                "winrate": 0.8333333333333334,
+                "winfrac": "15 / 18"
+            },
+            "99566406065437842": {
+                "name": "Dark Passage",
+                "winrate": 0.5,
+                "winfrac": "9 / 18"
+            },
+            "102235771678061291": {
+                "name": "DenizBank \u0130stanbul Wildcats",
+                "winrate": 0.5,
+                "winfrac": "9 / 18"
+            },
+            "98767991949608898": {
+                "name": "Fenerbah\u00e7e Espor",
+                "winrate": 0.4444444444444444,
+                "winfrac": "8 / 18"
+            },
+            "103495716836203404": {
+                "name": "5 Ronin",
+                "winrate": 0.3888888888888889,
+                "winfrac": "7 / 18"
+            },
+            "99566406066182955": {
+                "name": "GALAKTICOS",
+                "winrate": 0.3333333333333333,
+                "winfrac": "6 / 18"
+            },
+            "105536643047197642": {
+                "name": "NASR ESPORTS",
+                "winrate": 0.1111111111111111,
+                "winfrac": "2 / 18"
+            },
+            "103495716886587312": {
+                "name": "Be\u015fikta\u015f",
+                "winrate": 0.05555555555555555,
+                "winfrac": "1 / 18"
+            }
+        }
+    },
+    "CBLOL Split 1 2022": {
+        "tournament_id": "107405837336179496",
+        "region": "BRAZIL",
+        "teams": {
+            "99566408221961358": {
+                "name": "RED Kalunga",
+                "winrate": 1.0,
+                "winfrac": "18 / 18"
+            },
+            "99566408217955692": {
+                "name": "paiN Gaming",
+                "winrate": 0.8888888888888888,
+                "winfrac": "16 / 18"
+            },
+            "99566408222831088": {
+                "name": "Liberty",
+                "winrate": 0.7222222222222222,
+                "winfrac": "13 / 18"
+            },
+            "100205576307813373": {
+                "name": "Flamengo ",
+                "winrate": 0.6666666666666666,
+                "winfrac": "12 / 18"
+            },
+            "105397404796640412": {
+                "name": "LOUD",
+                "winrate": 0.6111111111111112,
+                "winfrac": "11 / 18"
+            },
+            "104202382255290736": {
+                "name": "RENSGA",
+                "winrate": 0.3888888888888889,
+                "winfrac": "7 / 18"
+            },
+            "99566408221114231": {
+                "name": "KaBuM! Esports",
+                "winrate": 0.3888888888888889,
+                "winfrac": "7 / 18"
+            },
+            "99566408217116828": {
+                "name": "INTZ",
+                "winrate": 0.2222222222222222,
+                "winfrac": "4 / 18"
+            },
+            "100205576309502431": {
+                "name": "FURIA",
+                "winrate": 0.05555555555555555,
+                "winfrac": "1 / 18"
+            },
+            "105397399468432537": {
+                "name": "Miners",
+                "winrate": 0.05555555555555555,
+                "winfrac": "1 / 18"
+            }
+        }
+    },
+    "TCL Summer 2022": {
+        "tournament_id": "108197589213750000",
+        "region": "EMEA",
+        "teams": {
+            "102235771678061291": {
+                "name": "DenizBank \u0130stanbul Wildcats",
+                "winrate": 1.0,
+                "winfrac": "18 / 18"
+            },
+            "105536643047197642": {
+                "name": "NASR ESPORTS",
+                "winrate": 0.7777777777777778,
+                "winfrac": "14 / 18"
+            },
+            "98767991949608898": {
+                "name": "Fenerbah\u00e7e Espor",
+                "winrate": 0.7222222222222222,
+                "winfrac": "13 / 18"
+            },
+            "101422616509070746": {
+                "name": "Galatasaray Espor",
+                "winrate": 0.6666666666666666,
+                "winfrac": "12 / 18"
+            },
+            "99566406069969565": {
+                "name": "Info Yat\u0131r\u0131m Aurora",
+                "winrate": 0.6111111111111112,
+                "winfrac": "11 / 18"
+            },
+            "99566406064558732": {
+                "name": "Papara SuperMassive ",
+                "winrate": 0.5555555555555556,
+                "winfrac": "10 / 18"
+            },
+            "103495716836203404": {
+                "name": "5 Ronin",
+                "winrate": 0.3333333333333333,
+                "winfrac": "6 / 18"
+            },
+            "99566406065437842": {
+                "name": "Dark Passage",
+                "winrate": 0.2222222222222222,
+                "winfrac": "4 / 18"
+            },
+            "103495716886587312": {
+                "name": "Be\u015fikta\u015f",
+                "winrate": 0.1111111111111111,
+                "winfrac": "2 / 18"
+            },
+            "99566406066182955": {
+                "name": "GALAKTICOS",
+                "winrate": 0.0,
+                "winfrac": "0 / 18"
+            }
+        }
+    },
+    "Winter 2023": {
+        "tournament_id": "109466537705744120",
+        "region": "EMEA",
+        "teams": {
+            "101383793574360315": {
+                "name": "KOI",
+                "winrate": 0.9444444444444444,
+                "winfrac": "17 / 18"
+            },
+            "98767991866488695": {
+                "name": "Fnatic",
+                "winrate": 0.8888888888888888,
+                "winfrac": "16 / 18"
+            },
+            "98767991926151025": {
+                "name": "G2 Esports",
+                "winrate": 0.8333333333333334,
+                "winfrac": "15 / 18"
+            },
+            "103461966965149786": {
+                "name": "MAD Lions",
+                "winrate": 0.6666666666666666,
+                "winfrac": "12 / 18"
+            },
+            "99322214695067838": {
+                "name": "Team Vitality",
+                "winrate": 0.5,
+                "winfrac": "9 / 18"
+            },
+            "101383793572656373": {
+                "name": "EXCEL",
+                "winrate": 0.5,
+                "winfrac": "9 / 18"
+            },
+            "101383793569248484": {
+                "name": "Astralis",
+                "winrate": 0.2777777777777778,
+                "winfrac": "5 / 18"
+            },
+            "101383793567806688": {
+                "name": "SK Gaming",
+                "winrate": 0.2777777777777778,
+                "winfrac": "5 / 18"
+            },
+            "107563714667537640": {
+                "name": "Team BDS",
+                "winrate": 0.1111111111111111,
+                "winfrac": "2 / 18"
+            },
+            "109637393694097670": {
+                "name": "Team Heretics",
+                "winrate": 0.0,
+                "winfrac": "0 / 18"
+            }
+        }
+    },
+    "LCK Spring 2022": {
+        "tournament_id": "107418445247362001",
+        "region": "KOREA",
+        "teams": {
+            "100725845018863243": {
+                "name": "Dplus Kia",
+                "winrate": 0.9444444444444444,
+                "winfrac": "17 / 18"
+            },
+            "98767991853197861": {
+                "name": "T1",
+                "winrate": 0.8888888888888888,
+                "winfrac": "16 / 18"
+            },
+            "100205573495116443": {
+                "name": "Gen.G",
+                "winrate": 0.8333333333333334,
+                "winfrac": "15 / 18"
+            },
+            "100205573496804586": {
+                "name": "Hanwha Life Esports",
+                "winrate": 0.6666666666666666,
+                "winfrac": "12 / 18"
+            },
+            "99566404581868574": {
+                "name": "Kwangdong Freecs",
+                "winrate": 0.5555555555555556,
+                "winfrac": "10 / 18"
+            },
+            "102747101565183056": {
+                "name": "NongShim REDFORCE",
+                "winrate": 0.3333333333333333,
+                "winfrac": "6 / 18"
+            },
+            "100725845022060229": {
+                "name": "Liiv SANDBOX",
+                "winrate": 0.3333333333333333,
+                "winfrac": "6 / 18"
+            },
+            "105505619546859895": {
+                "name": "OKSavingsBank BRION",
+                "winrate": 0.2222222222222222,
+                "winfrac": "4 / 18"
+            },
+            "99566404585387054": {
+                "name": "DRX",
+                "winrate": 0.1111111111111111,
+                "winfrac": "2 / 18"
+            },
+            "99566404579461230": {
+                "name": "kt Rolster",
+                "winrate": 0.1111111111111111,
+                "winfrac": "2 / 18"
+            }
+        }
+    },
+    "CBLOL Split 2 2022": {
+        "tournament_id": "108211865716506571",
+        "region": "BRAZIL",
+        "teams": {
+            "99566408217955692": {
+                "name": "paiN Gaming",
+                "winrate": 0.8888888888888888,
+                "winfrac": "16 / 18"
+            },
+            "99566408222831088": {
+                "name": "Liberty",
+                "winrate": 0.8888888888888888,
+                "winfrac": "16 / 18"
+            },
+            "99566408221961358": {
+                "name": "RED Kalunga",
+                "winrate": 0.8333333333333334,
+                "winfrac": "15 / 18"
+            },
+            "105397404796640412": {
+                "name": "LOUD",
+                "winrate": 0.7222222222222222,
+                "winfrac": "13 / 18"
+            },
+            "99566408221114231": {
+                "name": "KaBuM! Esports",
+                "winrate": 0.5555555555555556,
+                "winfrac": "10 / 18"
+            },
+            "100205576309502431": {
+                "name": "FURIA",
+                "winrate": 0.3888888888888889,
+                "winfrac": "7 / 18"
+            },
+            "105397399468432537": {
+                "name": "Miners",
+                "winrate": 0.3888888888888889,
+                "winfrac": "7 / 18"
+            },
+            "104202382255290736": {
+                "name": "RENSGA",
+                "winrate": 0.2222222222222222,
+                "winfrac": "4 / 18"
+            },
+            "100205576307813373": {
+                "name": "Flamengo ",
+                "winrate": 0.1111111111111111,
+                "winfrac": "2 / 18"
+            },
+            "99566408217116828": {
+                "name": "INTZ",
+                "winrate": 0.0,
+                "winfrac": "0 / 18"
+            }
+        }
+    },
+    "LLA Opening 2022": {
+        "tournament_id": "107530554766055254",
+        "region": "LATIN AMERICA",
+        "teams": {
+            "106806773698472633": {
+                "name": "Team Aze",
+                "winrate": 1.0,
+                "winfrac": "14 / 14"
+            },
+            "99566408562477641": {
+                "name": "INFINITY",
+                "winrate": 0.7857142857142857,
+                "winfrac": "11 / 14"
+            },
+            "104841890701948065": {
+                "name": "Estral Esports",
+                "winrate": 0.7857142857142857,
+                "winfrac": "11 / 14"
+            },
+            "99566408358330419": {
+                "name": "Isurus",
+                "winrate": 0.5714285714285714,
+                "winfrac": "8 / 14"
+            },
+            "98767991935149427": {
+                "name": "Movistar R7",
+                "winrate": 0.42857142857142855,
+                "winfrac": "6 / 14"
+            },
+            "99566408561605102": {
+                "name": "XTEN Esports",
+                "winrate": 0.21428571428571427,
+                "winfrac": "3 / 14"
+            },
+            "101383792559569368": {
+                "name": "All Knights",
+                "winrate": 0.21428571428571427,
+                "winfrac": "3 / 14"
+            },
+            "106806779752531762": {
+                "name": "Globant Emerald Team",
+                "winrate": 0.0,
+                "winfrac": "0 / 14"
+            }
+        }
+    },
+    "Playoffs - Spring 2023": {
+        "tournament_id": "110017385374098523",
+        "region": "HONG KONG, MACAU, TAIWAN",
+        "teams": {
+            "104367068120825486": {
+                "name": "PSG Talon",
+                "winrate": 1.0,
+                "winfrac": "14 / 14"
+            },
+            "107700199633958891": {
+                "name": "CTBC Flying Oyster",
+                "winrate": 0.8571428571428571,
+                "winfrac": "12 / 14"
+            },
+            "106269804045322803": {
+                "name": "Beyond Gaming",
+                "winrate": 0.6428571428571429,
+                "winfrac": "9 / 14"
+            },
+            "107760667929003738": {
+                "name": "Frank Esports",
+                "winrate": 0.5714285714285714,
+                "winfrac": "8 / 14"
+            },
+            "107700204561086446": {
+                "name": "Deep Cross Gaming",
+                "winrate": 0.5,
+                "winfrac": "7 / 14"
+            },
+            "106269859169658575": {
+                "name": "Impunity Esports",
+                "winrate": 0.2857142857142857,
+                "winfrac": "4 / 14"
+            },
+            "99566406332987990": {
+                "name": "The Chiefs",
+                "winrate": 0.07142857142857142,
+                "winfrac": "1 / 14"
+            },
+            "109675484017801229": {
+                "name": "Team Bliss",
+                "winrate": 0.07142857142857142,
+                "winfrac": "1 / 14"
+            }
+        }
+    },
+    "LCS Spring 2022": {
+        "tournament_id": "107458367237283414",
+        "region": "NORTH AMERICA",
+        "teams": {
+            "98926509885559666": {
+                "name": "Team Liquid Honda",
+                "winrate": 1.0,
+                "winfrac": "18 / 18"
+            },
+            "103461966951059521": {
+                "name": "Evil Geniuses LG",
+                "winrate": 0.8333333333333334,
+                "winfrac": "15 / 18"
+            },
+            "99294153828264740": {
+                "name": "100 Thieves",
+                "winrate": 0.8333333333333334,
+                "winfrac": "15 / 18"
+            },
+            "98767991877340524": {
+                "name": "Cloud9",
+                "winrate": 0.6666666666666666,
+                "winfrac": "12 / 18"
+            },
+            "98767991860392497": {
+                "name": "TSM",
+                "winrate": 0.5,
+                "winfrac": "9 / 18"
+            },
+            "98926509883054987": {
+                "name": "Dignitas",
+                "winrate": 0.4444444444444444,
+                "winfrac": "8 / 18"
+            },
+            "98926509884398584": {
+                "name": "CLG",
+                "winrate": 0.3333333333333333,
+                "winfrac": "6 / 18"
+            },
+            "98926509892121852": {
+                "name": "FlyQuest",
+                "winrate": 0.2777777777777778,
+                "winfrac": "5 / 18"
+            },
+            "98767991930907107": {
+                "name": "Immortals Progressive",
+                "winrate": 0.1111111111111111,
+                "winfrac": "2 / 18"
+            },
+            "99294153824386385": {
+                "name": "Golden Guardians",
+                "winrate": 0.0,
+                "winfrac": "0 / 18"
+            }
+        }
+    },
+    "LLA Closing 2022": {
+        "tournament_id": "108197521933954516",
+        "region": "LATIN AMERICA",
+        "teams": {
+            "104841890701948065": {
+                "name": "Estral Esports",
+                "winrate": 1.0,
+                "winfrac": "14 / 14"
+            },
+            "98767991935149427": {
+                "name": "Movistar R7",
+                "winrate": 0.8571428571428571,
+                "winfrac": "12 / 14"
+            },
+            "99566408358330419": {
+                "name": "Isurus",
+                "winrate": 0.6428571428571429,
+                "winfrac": "9 / 14"
+            },
+            "99566408562477641": {
+                "name": "INFINITY",
+                "winrate": 0.6428571428571429,
+                "winfrac": "9 / 14"
+            },
+            "99566408561605102": {
+                "name": "XTEN Esports",
+                "winrate": 0.42857142857142855,
+                "winfrac": "6 / 14"
+            },
+            "106806773698472633": {
+                "name": "Team Aze",
+                "winrate": 0.2857142857142857,
+                "winfrac": "4 / 14"
+            },
+            "101383792559569368": {
+                "name": "All Knights",
+                "winrate": 0.07142857142857142,
+                "winfrac": "1 / 14"
+            },
+            "106806779752531762": {
+                "name": "Globant Emerald Team",
+                "winrate": 0.07142857142857142,
+                "winfrac": "1 / 14"
+            }
+        }
+    },
+    "LJL Spring 2022": {
+        "tournament_id": "107455808271204256",
+        "region": "JAPAN",
+        "teams": {
+            "100285330168091787": {
+                "name": "DetonatioN FocusMe",
+                "winrate": 1.0,
+                "winfrac": "14 / 14"
+            },
+            "101428372600307248": {
+                "name": "Rascal Jester",
+                "winrate": 0.8571428571428571,
+                "winfrac": "12 / 14"
+            },
+            "101428372607057464": {
+                "name": "AXIZ",
+                "winrate": 0.7142857142857143,
+                "winfrac": "10 / 14"
+            },
+            "101428372602011186": {
+                "name": "V3 Esports",
+                "winrate": 0.5714285714285714,
+                "winfrac": "8 / 14"
+            },
+            "101428372605353526": {
+                "name": "Sengoku Gaming",
+                "winrate": 0.35714285714285715,
+                "winfrac": "5 / 14"
+            },
+            "103535282119620510": {
+                "name": "Fukuoka SoftBank HAWKS gaming",
+                "winrate": 0.35714285714285715,
+                "winfrac": "5 / 14"
+            },
+            "101428372598668846": {
+                "name": "Burning Core",
+                "winrate": 0.07142857142857142,
+                "winfrac": "1 / 14"
+            },
+            "101428372603715124": {
+                "name": "Crest Gaming Act",
+                "winrate": 0.07142857142857142,
+                "winfrac": "1 / 14"
+            }
+        }
+    }
+}
