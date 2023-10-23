@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+import { AnimatedBlob } from "@/components/AnimatedBlob";
+import { DotWave } from "@uiball/loaders";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { teamInfo } from "@/constants";
@@ -19,8 +21,10 @@ const images = [
 
 export default function Home() {
   const [current, setCurrent] = useState(0);
+  const [isClient, setIsClient] = useState<boolean>(false);
 
   useEffect(() => {
+    setIsClient(true);
     const timer = setInterval(() => {
       setCurrent((prevCurrent) => (prevCurrent + 1) % images.length);
     }, 3000); // Change image every 5 seconds
@@ -79,30 +83,90 @@ export default function Home() {
           </h2>
         </div>
       </div>
-          
-      <section style={{backgroundColor: "#011562"}}>
+
+      <section
+        className="relative z-0 overflow-hidden"
+        style={{ backgroundColor: "#011562" }}
+      >
         <div className="padding-x padding-y max-width">
+          {isClient ? (
+            <div className="items-center justify-center">
+              <AnimatedBlob
+                radius={200}
+                duration={20}
+                top={800}
+                left={0}
+                borderRadius="28% 72% 79% 21% / 21% 40% 60% 79%"
+                backgroundColor="#B99D76"
+                clockwise={true}
+              />
+              <AnimatedBlob
+                radius={200}
+                duration={20}
+                top={0}
+                left={window.innerWidth - 384}
+                borderRadius="61% 39% 19% 81% / 72% 40% 60% 28%"
+                backgroundColor="#0080DA"
+                clockwise={false}
+              />
+              <AnimatedBlob
+                radius={200}
+                duration={20}
+                top={window.innerHeight - 384}
+                left={0}
+                borderRadius="61% 39% 19% 81% / 29% 88% 12% 71%"
+                backgroundColor="#00218A"
+                clockwise={false}
+              />
+              <AnimatedBlob
+                radius={200}
+                duration={20}
+                top={window.innerHeight - 384}
+                left={window.innerWidth - 384}
+                borderRadius="29% 71% 19% 81% / 47% 20% 80% 53%"
+                backgroundColor="#7391AF"
+                clockwise={true}
+              />
+            </div>
+          ) : (
+            <>
+              <DotWave size={47} speed={1} color="white" />
+            </>
+          )}
           <div className="flex flex-col">
-            <h2 className="text-5xl">
-                Demo
-            </h2>
+            <h2 className="text-5xl">Demo</h2>
             <div className="mt-6 flex justify-center">
-              <ReactPlayer url="https://youtu.be/qLCf9HkTfHY" width={1280} height={720} controls={true}/>
+              <ReactPlayer
+                url="https://youtu.be/qLCf9HkTfHY"
+                width={1280}
+                height={720}
+                controls={true}
+              />
             </div>
           </div>
           <div className="mt-6 flex flex-col">
-            <h2 className="py-5 text-5xl">
-              Methodology
-            </h2>
-            <p className="font-mark-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit molestie dictum. Proin eget suscipit nibh. Nullam molestie velit ut lectus semper, sed pulvinar nisl egestas. Aliquam est lacus, suscipit non varius at, tincidunt sit amet sem. Maecenas nulla ligula, ultrices id nisl eu, consectetur varius diam. Nulla ut ex odio. Curabitur blandit in lacus eget malesuada. Sed ac mauris blandit, congue nibh nec, sagittis ante. Phasellus posuere quam a est fermentum, at mollis odio porta. Curabitur commodo elit eu aliquam ornare. Donec imperdiet ornare erat, nec posuere lacus tristique nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis efficitur mattis nunc, at dictum ante tempus sed. Suspendisse varius ut eros vel blandit. Maecenas pulvinar nunc vulputate, feugiat justo sed, mollis odio.</p>
+            <h2 className="py-5 text-5xl">Methodology</h2>
+            <p className="font-mark-medium">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              suscipit molestie dictum. Proin eget suscipit nibh. Nullam
+              molestie velit ut lectus semper, sed pulvinar nisl egestas.
+              Aliquam est lacus, suscipit non varius at, tincidunt sit amet sem.
+              Maecenas nulla ligula, ultrices id nisl eu, consectetur varius
+              diam. Nulla ut ex odio. Curabitur blandit in lacus eget malesuada.
+              Sed ac mauris blandit, congue nibh nec, sagittis ante. Phasellus
+              posuere quam a est fermentum, at mollis odio porta. Curabitur
+              commodo elit eu aliquam ornare. Donec imperdiet ornare erat, nec
+              posuere lacus tristique nec. Interdum et malesuada fames ac ante
+              ipsum primis in faucibus. Duis efficitur mattis nunc, at dictum
+              ante tempus sed. Suspendisse varius ut eros vel blandit. Maecenas
+              pulvinar nunc vulputate, feugiat justo sed, mollis odio.
+            </p>
           </div>
           <div className="mt-6 flex flex-col">
-            <h2 className="flex text-5xl justify-center">
-              Team Members
-            </h2>
-            <TeamMembers teamInfo={teamInfo}/>
+            <h2 className="flex text-5xl justify-center">Team Members</h2>
+            <TeamMembers teamInfo={teamInfo} />
           </div>
-        </div>    
+        </div>
       </section>
     </main>
   );
