@@ -32,9 +32,10 @@ export const updateTeamData = (
 
       if (tournamentTeam) {
         // Update the winrate and winfrac for this team based on the tournament data
+        const winratePercent = parseFloat((tournamentTeam.winrate * 100).toFixed(2))
         return {
           ...team,
-          winrate: tournamentTeam.winrate,
+          winrate: winratePercent,
           winfrac: tournamentTeam.winfrac,
         };
       }
