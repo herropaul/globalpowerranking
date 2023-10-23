@@ -8,7 +8,7 @@ import { columns } from "@/components/columns";
 import { sortByKey } from "@/utils/sortByArray";
 import { updateTeamData } from "@/utils/teamDataByTourney";
 import tourneys from "../../../../tourneys.json";
-import teams from "../../../../globalRankings.json";
+import teams from "../../../../allTeams_Final.json";
 import { TourneysType } from "@/types/tourneys";
 
 export default function TournamentRankings({ params }: any) {
