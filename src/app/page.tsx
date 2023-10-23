@@ -90,12 +90,12 @@ export default function Home() {
               <ReactPlayer url="https://youtu.be/qLCf9HkTfHY" width={1280} height={720} controls={true}/>
             </div>
           </div>
-          <div className="mt-6 flex flex-col">
+          {/* <div className="mt-6 flex flex-col">
             <h2 className="py-5 text-5xl">
               Methodology
             </h2>
             <p className="font-mark-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit molestie dictum. Proin eget suscipit nibh. Nullam molestie velit ut lectus semper, sed pulvinar nisl egestas. Aliquam est lacus, suscipit non varius at, tincidunt sit amet sem. Maecenas nulla ligula, ultrices id nisl eu, consectetur varius diam. Nulla ut ex odio. Curabitur blandit in lacus eget malesuada. Sed ac mauris blandit, congue nibh nec, sagittis ante. Phasellus posuere quam a est fermentum, at mollis odio porta. Curabitur commodo elit eu aliquam ornare. Donec imperdiet ornare erat, nec posuere lacus tristique nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis efficitur mattis nunc, at dictum ante tempus sed. Suspendisse varius ut eros vel blandit. Maecenas pulvinar nunc vulputate, feugiat justo sed, mollis odio.</p>
-          </div>
+          </div> */}
           <div className="mt-6 flex flex-col">
             <h2 className="flex text-5xl justify-center">
               Team Members
