@@ -29,11 +29,13 @@ import { DataTablePagination } from "@/components/data-table-pagination";
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
+  filter?: boolean;
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
+  filter = true
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
@@ -43,6 +45,7 @@ export function DataTable<TData, TValue>({
   const table = useReactTable({
     data,
     columns,
+    filter,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     onSortingChange: setSorting,
@@ -57,7 +60,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <div>
-      <div className="flex items-center py-4">
+      {filter && (<div className="flex items-center py-4">
         <Input
           placeholder="Filter teams..."
           value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
@@ -66,7 +69,7 @@ export function DataTable<TData, TValue>({
           }
           className="max-w-sm text-table-foreground"
         />
-      </div>
+      </div>)}
       <div className="rounded-sm border">
         <Table>
           <TableHeader>

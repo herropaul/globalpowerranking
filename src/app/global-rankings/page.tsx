@@ -10,10 +10,6 @@ import { AnimatedBlob } from "@/components/AnimatedBlob";
 import { DotWave } from "@uiball/loaders";
 import { sortByKey } from "../../utils/sortByArray";
 
-export const metadata: Metadata = {
-  title: "Global Rankings",
-};
-
 export default function GlobalRankings() {
   const [isClient, setIsClient] = useState<boolean>(false);
 
