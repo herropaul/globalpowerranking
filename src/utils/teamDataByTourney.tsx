@@ -27,6 +27,9 @@ export const updateTeamData = (
     .map((team) => {
       if (!tournament) return null; // Return null if no tournament was found
       const tournamentTeam = tournament.teams[team.id];
+      console.log("Checking team ID:", team.id);
+      console.log("Matched tournament team:", tournamentTeam);
+
       if (tournamentTeam) {
         // Update the winrate and winfrac for this team based on the tournament data
         return {
