@@ -1,31 +1,19 @@
 import { Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
-
-export type TeamType = {
-  id: string;
-  ranking: number;
-  name: string;
-  teamLogoURL: string;
-  winrate: number;
-  winfrac: string;
-  score: number;
-  league_name: string;
-  region: string;
-  acronym: string;
-}[];
+import { TeamType } from "@/types/teams";
 
 type ComboBoxProps = {
-  dataset: TeamType;
-  onTeamSelected: React.Dispatch<React.SetStateAction<TeamType>>;
+  dataset: TeamType[];
+  onTeamSelected: React.Dispatch<React.SetStateAction<TeamType[]>>;
 };
 
 export default function ComboBox({ dataset, onTeamSelected }: ComboBoxProps) {
-  const [selectedTeams, setSelectedTeams] = useState<TeamType>([]); // Renamed for clarity
+  const [selectedTeams, setSelectedTeams] = useState<TeamType[]>([]); // Renamed for clarity
   const [query, setQuery] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("");
 
-  const [allTeams, setAllTeams] = useState<TeamType>(dataset);
+  const [allTeams, setAllTeams] = useState<TeamType[]>(dataset);
 
   const handleSelection = (
     e: React.MouseEvent,
@@ -34,11 +22,15 @@ export default function ComboBox({ dataset, onTeamSelected }: ComboBoxProps) {
     e.preventDefault();
     e.stopPropagation();
 
-    // If the team is already selected, do nothing
+    // If the team is already selected, remove it from the list
     if (selectedTeams.some((team) => team.id === selectedTeam.id)) {
+      const updatedTeams = selectedTeams.filter(
+        (team) => team.id !== selectedTeam.id
+      );
+      setSelectedTeams(updatedTeams);
+      onTeamSelected(updatedTeams);
       return;
     }
-
     // Get original winrates
     const allTeamsWithOriginalWinrates = [selectedTeam, ...selectedTeams].map(
       (team) => ({
@@ -69,9 +61,11 @@ export default function ComboBox({ dataset, onTeamSelected }: ComboBoxProps) {
 
   const teams = allTeams;
 
-  const uniqueRegions: string[] = Array.from(
-    new Set(teams.map((team) => team.region))
+  const regions = teams.map((team) => team.region);
+  const validRegions = regions.filter((region): region is string =>
+    Boolean(region)
   );
+  const uniqueRegions: string[] = Array.from(new Set(validRegions));
 
   const filteredData = teams.filter((team) => {
     const matchesQuery = team.name.toLowerCase().includes(query.toLowerCase());

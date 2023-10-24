@@ -5,13 +5,14 @@ import React, { useState, useEffect } from "react";
 import { DotWave } from "@uiball/loaders";
 import teamData from "../../../globalRankings.json";
 import { useRouter } from "next/navigation";
-import ComboBox, { TeamType } from "./TeamComboBox";
+import ComboBox from "./TeamComboBox";
 import { DataTable } from "@/components/data-table";
 import { columns } from "@/components/columns";
+import { TeamType } from "@/types/teams";
 
 export default function TeamRankings() {
   const [isClient, setIsClient] = useState<boolean>(false);
-  const [selectedTeams, setSelectedTeams] = useState<TeamType>([]);
+  const [selectedTeams, setSelectedTeams] = useState<TeamType[]>([]);
   const router = useRouter();
 
   useEffect(() => {

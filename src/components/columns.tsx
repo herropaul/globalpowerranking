@@ -1,22 +1,11 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { TeamType } from "@/types/teams";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 import Image from "next/image";
 
-export type TeamType = {
-  id: string;
-  ranking: number;
-  name: string;
-  teamLogoURL: string;
-  winrate: number;
-  winfrac: string;
-  score: number;
-  league_name: string;
-  region: string;
-  acronym: string;
-};
 
 export const columns: ColumnDef<TeamType>[] = [
   {
@@ -68,4 +57,5 @@ export const columns: ColumnDef<TeamType>[] = [
     accessorKey: "winfrac",
     header: "Win Ratio",
   },
+  
 ];

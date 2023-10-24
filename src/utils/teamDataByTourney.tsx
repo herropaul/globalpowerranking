@@ -1,30 +1,18 @@
+import { TeamType } from "@/types/teams";
 import { TourneysType } from "@/types/tourneys";
-
-type TeamData = {
-  name: string;
-  id: string;
-  score: number;
-  winfrac: string;
-  ranking: number;
-  teamLogoURL: string;
-  acronym: string;
-  winrate: number;
-  league_name: string;
-  region: string;
-}[];
 
 export const updateTeamData = (
   tournament_id: string,
   tourneys: TourneysType,
-  teams: TeamData
-): TeamData => {
+  teams: TeamType[]
+): TeamType[] => {
   // Get the specific tournament based on the given tournament_id
   const tournament = Object.values(tourneys).find(
     (t) => t.tournament_id === tournament_id
   );
   // Create a new updated teams array
   const updatedTeams = teams
-    .map((team) => {
+    .map((team: any) => {
       if (!tournament) return null; // Return null if no tournament was found
       const tournamentTeam = tournament.teams[team.id];
       console.log("Checking team ID:", team.id);
@@ -41,7 +29,7 @@ export const updateTeamData = (
       }
       return null;
     })
-    .filter((team) => team !== null) as TeamData; // Only retain non-null teams (i.e., updated teams)
+    .filter((team) => team !== null) as TeamType[]; // Only retain non-null teams (i.e., updated teams)
 
   // Sort the updated teams based on winrate in descending order
   updatedTeams.sort((a, b) => b.winrate - a.winrate);
