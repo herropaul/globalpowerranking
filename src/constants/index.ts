@@ -1,6 +1,6 @@
 export const teamInfo = [
     {
-        name: "Justin",
+        name: "Justin Chung",
         role: "Frontend Developer",
         imageUrl: "/team_member_icons/Kaisa_0.jpg",
         description: "",
@@ -10,9 +10,9 @@ export const teamInfo = [
         ]
     },
     {
-        name: "Paul",
+        name: "Paul Nguon",
         role: "Frontend Developer",
-        imageUrl: "/team_member_icons/paul_github.jpg",
+        imageUrl: "/team_member_icons/Velkoz_1.jpg",
         description: "",
         socials: [
             { title: "Github", url: "https://github.com/herropaul" },
@@ -20,9 +20,9 @@ export const teamInfo = [
         ]
     },
     {
-        name: "Sarah",
+        name: "Sarah Jay Thraen",
         role: "UI/UX Designer",
-        imageUrl: "/Aatrox_8.jpg",
+        imageUrl: "/team_member_icons/Jinx_38.jpg",
         description: "",
         socials: [
             { title: "website", url: "http://www.sarahjaythraen.com" },
@@ -30,19 +30,19 @@ export const teamInfo = [
         ]
     },
     {
-        name: "Dylan",
+        name: "Dylan Wattles",
         role: "Backend Developer",
         imageUrl: "/team_member_icons/Heimerdinger_2.jpg",
         description: "",
         socials: [
             { title: "Github", url: "https://github.com/dwattles" },
-            { title: "LinkedIn", url: "/" }
+            { title: "LinkedIn", url: "https://www.linkedin.com/in/dylan-wattles" }
         ]
     },
     {
-        name: "Hunter",
+        name: "Hunter Lewis",
         role: "Backend Developer",
-        imageUrl: "/Aatrox_3.jpg",
+        imageUrl: "/team_member_icons/Aphelios_0.jpg",
         description: "",
         socials: [
             { title: "Github", url: "https://github.com/THESUPP0RTER" },
@@ -50,9 +50,9 @@ export const teamInfo = [
         ]
     },
     {
-        name: "Siddharth",
+        name: "Siddharth Kunche",
         role: "AWS Solutions Architect",
-        imageUrl: "/team_member_icons/siddharth.jpg",
+        imageUrl: "/team_member_icons/Ekko_36.jpg",
         description: "",
         socials: [
             { title: "Github", url: "https://github.com/siddharthkunche/" },
@@ -60,13 +60,12 @@ export const teamInfo = [
         ]
     },
     {
-        name: "Seb",
+        name: "Sebastian Gonzalez",
         role: "Backend Developer",
-        imageUrl: "/Aatrox_9.jpg",
+        imageUrl: "/team_member_icons/Fiora_41.jpg",
         description: "",
         socials: [
-            { title: "Github", url: "" },
-            { title: "LinkedIn", url: "/" }
+            { title: "Github", url: "https://github.com/Sebas2545" }
         ]
     },
 ]
