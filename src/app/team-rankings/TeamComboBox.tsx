@@ -1,61 +1,71 @@
 import { Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
-
-export type TeamType = {
-  id: string;
-  ranking: number;
-  name: string;
-  teamLogoURL: string;
-  winrate: number;
-  winfrac: string;
-  score: number;
-  league_name: string;
-  region: string;
-  acronym: string;
-}[];
+import { TeamType } from "@/types/teams";
 
 type ComboBoxProps = {
-  dataset: TeamType;
-  onTeamSelected: React.Dispatch<React.SetStateAction<string[] | null>>;
+  dataset: TeamType[];
+  onTeamSelected: React.Dispatch<React.SetStateAction<TeamType[]>>;
 };
 
 export default function ComboBox({ dataset, onTeamSelected }: ComboBoxProps) {
-  const [selectedTeams, setSelectedTeams] = useState<string[]>([]); // Renamed for clarity
-  const [selectedTeamIDs, setSelectedTeamIDs] = useState<string[]>([]);
+  const [selectedTeams, setSelectedTeams] = useState<TeamType[]>([]); // Renamed for clarity
   const [query, setQuery] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("");
 
+  const [allTeams, setAllTeams] = useState<TeamType[]>(dataset);
+
   const handleSelection = (
     e: React.MouseEvent,
-    teamID: string,
-    teamName: string
+    selectedTeam: (typeof dataset)[0]
   ) => {
     e.preventDefault();
     e.stopPropagation();
 
-    let updatedTeamIDs = [...selectedTeamIDs];
-    let updatedTeamNames = [...selectedTeams];
-
-    if (updatedTeamNames.includes(teamName)) {
-      const index = updatedTeamNames.indexOf(teamName);
-      updatedTeamNames.splice(index, 1);
-      updatedTeamIDs.splice(index, 1);
-    } else {
-      updatedTeamNames.push(teamName);
-      updatedTeamIDs.push(teamID);
+    // If the team is already selected, remove it from the list
+    if (selectedTeams.some((team) => team.id === selectedTeam.id)) {
+      const updatedTeams = selectedTeams.filter(
+        (team) => team.id !== selectedTeam.id
+      );
+      setSelectedTeams(updatedTeams);
+      onTeamSelected(updatedTeams);
+      return;
     }
+    // Get original winrates
+    const allTeamsWithOriginalWinrates = [selectedTeam, ...selectedTeams].map(
+      (team) => ({
+        ...team,
+        originalWinrate: dataset.find((t) => t.id === team.id)?.winrate,
+      })
+    );
 
-    setSelectedTeamIDs(updatedTeamIDs);
-    setSelectedTeams(updatedTeamNames);
-    onTeamSelected(selectedTeamIDs);
+    // Sort all teams by their original winrates in descending order
+    const sortedTeams = allTeamsWithOriginalWinrates.sort((a, b) => {
+      return (b.originalWinrate || 0) - (a.originalWinrate || 0);
+    });
+
+    // Assign rankings based on the sorted order
+    const rerankedTeams = sortedTeams.map((team, index) => ({
+      ...team,
+      ranking: index + 1, // Set rank starting from 1 for the highest winrate
+    }));
+
+    setSelectedTeams(rerankedTeams);
+    onTeamSelected(rerankedTeams);
   };
 
-  const teams = dataset;
+  const clearSelection = () => {
+    setSelectedTeams([]);
+    onTeamSelected([]);
+  };
 
-  const uniqueRegions: string[] = Array.from(
-    new Set(teams.map((team) => team.region))
+  const teams = allTeams;
+
+  const regions = teams.map((team) => team.region);
+  const validRegions = regions.filter((region): region is string =>
+    Boolean(region)
   );
+  const uniqueRegions: string[] = Array.from(new Set(validRegions));
 
   const filteredData = teams.filter((team) => {
     const matchesQuery = team.name.toLowerCase().includes(query.toLowerCase());
@@ -72,7 +82,7 @@ export default function ComboBox({ dataset, onTeamSelected }: ComboBoxProps) {
             <Combobox.Input
               className="w-full border-none py-2 pl-3 pr-10 text-base leading-5 bg-white text-gray-900 focus:ring-0 md:text-lg"
               placeholder="Select a team..."
-              value={selectedTeams.join(", ")} // Display the selected team names
+              value={selectedTeams.map((team) => team.name).join(", ")}
               onChange={(event) => setQuery(event.target.value)}
             />
             <div className="absolute inset-y-0 right-0 flex items-center pr-2">
@@ -91,7 +101,7 @@ export default function ComboBox({ dataset, onTeamSelected }: ComboBoxProps) {
             leaveTo="opacity-0"
             afterLeave={() => setQuery("")}
           >
-            <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none md:text-sm px-2">
+            <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none md:text-sm px-2 z-10">
               <div className="flex flex-wrap">
                 {uniqueRegions.map((region) => (
                   <button
@@ -139,20 +149,20 @@ export default function ComboBox({ dataset, onTeamSelected }: ComboBoxProps) {
                       }`
                     }
                     value={team.name}
-                    onClick={(e) => handleSelection(e, team.id, team.name)}
+                    onClick={(e) => handleSelection(e, team)}
                   >
                     {({ active }) => (
                       <>
                         <span
                           className={`block truncate ${
-                            selectedTeamIDs.includes(team.id)
+                            selectedTeams.find((t) => t.id === team.id)
                               ? "font-medium"
                               : "font-normal"
                           }`}
                         >
                           {team.name}
                         </span>
-                        {selectedTeamIDs.includes(team.id) ? (
+                        {selectedTeams.find((t) => t.id === team.id) ? (
                           <span
                             className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
                               active ? "text-white" : "text-teal-600"
@@ -169,14 +179,13 @@ export default function ComboBox({ dataset, onTeamSelected }: ComboBoxProps) {
             </Combobox.Options>
           </Transition>
         </div>
-        <button
-          //style={{ backgroundColor: "#00C8C8" }}
-          className="px-2 py-2 mx-3 font-bold text-white rounded bg-teal-500 hover:bg-teal-700 "
-          type="submit"
-        >
-          Submit
-        </button>
       </Combobox>
+      <button
+        className="px-2 py-2 mx-3 font-bold text-white rounded bg-teal-500 hover:bg-teal-700 "
+        onClick={clearSelection}
+      >
+        Clear Selection
+      </button>
     </div>
   );
 }

@@ -26,19 +26,58 @@ import {
 
 import { DataTablePagination } from "@/components/data-table-pagination";
 
-interface DataTableProps<TData, TValue> {
+export type Team = {
+  id: string;
+  ranking: number;
+  name: string;
+  teamLogoURL: string;
+  winrate: number;
+  winfrac: string;
+  score: number;
+  league_name: string;
+  region: string;
+  acronym: string;
+};
+
+interface DataTableProps<TData extends object, TValue = any> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
+  filter?: boolean;
 }
 
-export function DataTable<TData, TValue>({
+export function DataTable<TData extends object, TValue = any>({
   columns,
   data,
+  filter = true,
 }: DataTableProps<TData, TValue>) {
+  const expanderColumn = {
+    accessorKey: "expander",
+    cell: (cellProps) => {
+      const row = cellProps.row;
+      return (
+        <div onClick={() => row.toggleExpanded()} style={{ cursor: "pointer" }}>
+          {row.getIsExpanded() ? (
+            <span style={{ transform: "rotate(90deg)", fontSize: "2.5rem" }}>
+              ›
+            </span>
+          ) : (
+            <span style={{ transform: "rotate(180deg)", fontSize: "2.5rem" }}>
+              ›
+            </span>
+          )}
+        </div>
+      );
+    },
+    // No header for the expander column
+    header: () => null,
+  } as ColumnDef<TData, TValue>;
+  const [hoveredRowId, setHoveredRowId] = React.useState<string | null>(null);
+
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
+  columns = [...columns, expanderColumn];
 
   const table = useReactTable({
     data,
@@ -57,52 +96,76 @@ export function DataTable<TData, TValue>({
 
   return (
     <div>
-      <div className="flex items-center py-4">
-        <Input
-          placeholder="Filter teams..."
-          value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
-          onChange={(event) =>
-            table.getColumn("name")?.setFilterValue(event.target.value)
-          }
-          className="max-w-sm text-table-foreground"
-        />
-      </div>
+      {filter && (
+        <div className="flex items-center py-4">
+          <Input
+            placeholder="Filter teams..."
+            value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
+            onChange={(event) =>
+              table.getColumn("name")?.setFilterValue(event.target.value)
+            }
+            className="max-w-sm text-table-foreground"
+          />
+        </div>
+      )}
       <div className="rounded-sm border">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
-                {headerGroup.headers.map((header) => {
-                  return (
-                    <TableHead key={header.id}>
-                      {header.isPlaceholder
-                        ? null
-                        : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
-                    </TableHead>
-                  );
-                })}
+                {headerGroup.headers.map((header) => (
+                  <TableHead key={header.id}>
+                    {header.isPlaceholder
+                      ? null
+                      : flexRender(
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
+                  </TableHead>
+                ))}
               </TableRow>
             ))}
           </TableHeader>
           <TableBody>
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
-                <TableRow
-                  key={row.id}
-                  data-state={row.getIsSelected() && "selected"}
-                >
-                  {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
-                    </TableCell>
-                  ))}
-                </TableRow>
+                <>
+                  <TableRow
+                    key={row.id}
+                    data-state={row.getIsSelected() && "selected"}
+                  >
+                    {row.getVisibleCells().map((cell) => (
+                      <TableCell key={cell.id}>
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
+                      </TableCell>
+                    ))}
+                  </TableRow>
+                  {row.getIsExpanded() && (
+                    <TableRow>
+                      <TableCell colSpan={columns.length}>
+                        <div style={{ padding: "1rem" }}>
+                          {"region" in row.original && (
+                            <>
+                              <p>
+                                <strong>Region:</strong> {row.original.region}
+                              </p>
+                              <p>
+                                <strong>League Name:</strong>{" "}
+                                {row.original.league_name}
+                              </p>
+                              <p>
+                                <strong>Acronym:</strong> {row.original.acronym}
+                              </p>
+                            </>
+                          )}
+                        </div>
+                      </TableCell>
+                    </TableRow>
+                  )}
+                </>
               ))
             ) : (
               <TableRow>
