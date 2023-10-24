@@ -29,6 +29,7 @@ export default function ComboBox({
   const [selected, setSelected] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleSelection = (tournamentID: string) => {
     onTournamentSelected(tournamentID);
@@ -63,15 +64,11 @@ export default function ComboBox({
               placeholder="Select a tournament..."
               displayValue={(data: any) => data}
               onChange={(event) => setQuery(event.target.value)}
+              onFocus={() => {
+                setIsOpen(true);
+              }}
             />
-            <div className="absolute inset-y-0 right-0 flex items-center pr-2">
-              <Combobox.Button>
-                <ChevronUpDownIcon
-                  className="h-5 w-5 text-gray-400"
-                  aria-hidden="true"
-                />
-              </Combobox.Button>
-            </div>
+            <div className="absolute inset-y-0 right-0 flex items-center pr-2"></div>
           </div>
           <Transition
             as={Fragment}
@@ -79,6 +76,7 @@ export default function ComboBox({
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
             afterLeave={() => setQuery("")}
+            show={isOpen}
           >
             <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none md:text-sm px-2">
               <div className="flex flex-wrap">
@@ -128,7 +126,10 @@ export default function ComboBox({
                       }`
                     }
                     value={tournament.name}
-                    onClick={() => handleSelection(tournament.tournament_id)}
+                    onClick={() => {
+                      handleSelection(tournament.tournament_id);
+                      setIsOpen(false);
+                    }}
                   >
                     {({ selected, active }) => (
                       <>
