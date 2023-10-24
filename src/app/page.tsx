@@ -157,6 +157,23 @@ export default function Home() {
                 controls={true}
               />
             </div>
+            <div>
+              <h2 className="text-5xl py-3">Prediction Model</h2>
+              <div className=" text-2xl py-3">
+                <p>
+                  Want an in-depth explanation on how we ranked these teams?
+                  <br />
+                  <a
+                    href="https://drive.google.com/file/d/13BKKiCPewnowDDfRtawRN-h89_EXSnhh/view"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-blue-500 hover:text-blue-800"
+                  >
+                    Read the paper here.
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
           <div className="mt-6 flex flex-col">
             <h2 className="flex text-5xl py-6">Team Members</h2>
