@@ -25,27 +25,16 @@ import {
 } from "@/components/ui/table";
 
 import { DataTablePagination } from "@/components/data-table-pagination";
+import { TeamType } from "@/types/teams";
+import { ChevronDown, ChevronLeft } from "lucide-react";
 
-export type Team = {
-  id: string;
-  ranking: number;
-  name: string;
-  teamLogoURL: string;
-  winrate: number;
-  winfrac: string;
-  score: number;
-  league_name: string;
-  region: string;
-  acronym: string;
-};
-
-interface DataTableProps<TData extends object, TValue = any> {
+interface DataTableProps<TData extends TeamType, TValue = any> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
   filter?: boolean;
 }
 
-export function DataTable<TData extends object, TValue = any>({
+export function DataTable<TData extends TeamType, TValue = any>({
   columns,
   data,
   filter = true,
@@ -56,15 +45,7 @@ export function DataTable<TData extends object, TValue = any>({
       const row = cellProps.row;
       return (
         <div onClick={() => row.toggleExpanded()} style={{ cursor: "pointer" }}>
-          {row.getIsExpanded() ? (
-            <span style={{ transform: "rotate(90deg)", fontSize: "2.5rem" }}>
-              ›
-            </span>
-          ) : (
-            <span style={{ transform: "rotate(180deg)", fontSize: "2.5rem" }}>
-              ›
-            </span>
-          )}
+          {row.getIsExpanded() ? <ChevronDown /> : <ChevronLeft />}
         </div>
       );
     },
@@ -145,7 +126,7 @@ export function DataTable<TData extends object, TValue = any>({
                       </TableCell>
                     ))}
                   </TableRow>
-                  {/* {row.getIsExpanded() && (
+                  {row.getIsExpanded() && (
                     <TableRow>
                       <TableCell colSpan={columns.length}>
                         <div style={{ padding: "1rem" }}>
@@ -166,7 +147,7 @@ export function DataTable<TData extends object, TValue = any>({
                         </div>
                       </TableCell>
                     </TableRow>
-                  )} */}
+                  )}
                 </>
               ))
             ) : (

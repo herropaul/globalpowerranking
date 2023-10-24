@@ -96,18 +96,18 @@ export default function ComboBox({ dataset, onTeamSelected }: ComboBoxProps) {
 
 
   return (
-    <div className="flex w-full sm:w-5/6 " ref={comboboxRef}>
+    <div className="w-full flex items-center" ref={comboboxRef}>
       <Combobox>
-        <div className="w-full relative mt-1">
-          <div className="relative w-full cursor-default overflow-hidden rounded-xl bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 text-xs sm:text-sm">
+        <div className="w-full">
+          <div className="w-full cursor-default overflow-hidden rounded-xl bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 text-xl sm:text-sm">
             <Combobox.Input
-              className="w-full border-none py-2 pl-3 pr-10 text-base leading-5 bg-white text-gray-900 focus:ring-0 md:text-lg"
+              className="w-full overflow-ellipsis border-none py-2 pl-3 pr-10 text-base leading-5 bg-white text-gray-900 focus:ring-0"
               placeholder="Select a team..."
               value={selectedTeams.map((team) => team.name).join(", ")}
               onChange={(event) => setQuery(event.target.value)}
               onFocus={() => setIsOpen(true)}
             />
-            <div className="absolute inset-y-0 right-0 flex items-center pr-2"></div>
+            
           </div>
           <Transition
             as={Fragment}
@@ -117,7 +117,7 @@ export default function ComboBox({ dataset, onTeamSelected }: ComboBoxProps) {
             afterLeave={() => setQuery("")}
             show={isOpen}
           >
-            <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none md:text-sm px-2 z-10">
+            <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-opacity-5 focus:outline-none px-2 z-10">
               <div className="flex flex-wrap">
                 {uniqueRegions.map((region) => (
                   <button
