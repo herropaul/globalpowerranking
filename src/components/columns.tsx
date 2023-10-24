@@ -1,5 +1,6 @@
 "use client";
 
+
 import { Button } from "@/components/ui/button";
 import { TeamType } from "@/types/teams";
 import { ColumnDef } from "@tanstack/react-table";
@@ -21,6 +22,11 @@ export const columns: ColumnDef<TeamType>[] = [
         </Button>
       );
     },
+    cell: tableProps => (
+      <div className="flex pl-10 text-3xl font-molend-regular">
+        {tableProps.row.original.ranking}
+      </div>
+    )
   },
   {
     accessorKey: "name",
@@ -37,6 +43,7 @@ export const columns: ColumnDef<TeamType>[] = [
     },
     cell: (tableProps) => (
       <div className="flex">
+
         <Image
           src={tableProps.row.original.teamLogoURL}
           width={40}
@@ -44,6 +51,7 @@ export const columns: ColumnDef<TeamType>[] = [
           alt="team logo"
         />
         <div className="flex flex-col justify-center text-3xl pl-6 font-molend-regular">
+
           {tableProps.row.original.name}
         </div>
       </div>
@@ -52,10 +60,20 @@ export const columns: ColumnDef<TeamType>[] = [
   {
     accessorKey: "winrate",
     header: "Win %",
+    cell: tableProps => (
+      <div className="flex text-lg">
+        {tableProps.row.original.winrate}
+      </div>
+    )
   },
   {
     accessorKey: "winfrac",
     header: "Win Ratio",
+    cell: tableProps => (
+      <div className="text-lg">
+        {(tableProps.row.original.winfrac)}
+      </div>
+    )
   },
   
 ];
