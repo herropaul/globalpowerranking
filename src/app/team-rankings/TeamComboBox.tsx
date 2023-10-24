@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import { TeamType } from "@/types/teams";
@@ -12,6 +12,9 @@ export default function ComboBox({ dataset, onTeamSelected }: ComboBoxProps) {
   const [selectedTeams, setSelectedTeams] = useState<TeamType[]>([]); // Renamed for clarity
   const [query, setQuery] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+
+    const comboboxRef = useRef<HTMLDivElement>(null);
 
   const [allTeams, setAllTeams] = useState<TeamType[]>(dataset);
 
@@ -74,8 +77,26 @@ export default function ComboBox({ dataset, onTeamSelected }: ComboBoxProps) {
     return matchesQuery && matchesRegion;
   });
 
+    useEffect(() => {
+      function handleClickOutside(event: MouseEvent) {
+        if (
+          comboboxRef.current &&
+          !comboboxRef.current.contains(event.target as Node)
+        ) {
+          setIsOpen(false);
+        }
+      }
+
+      document.addEventListener("mousedown", handleClickOutside);
+
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [comboboxRef, setIsOpen]);
+
+
   return (
-    <div className="flex w-full sm:w-5/6 ">
+    <div className="flex w-full sm:w-5/6 " ref={comboboxRef}>
       <Combobox>
         <div className="w-full relative mt-1">
           <div className="relative w-full cursor-default overflow-hidden rounded-xl bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 text-xs sm:text-sm">
@@ -84,15 +105,9 @@ export default function ComboBox({ dataset, onTeamSelected }: ComboBoxProps) {
               placeholder="Select a team..."
               value={selectedTeams.map((team) => team.name).join(", ")}
               onChange={(event) => setQuery(event.target.value)}
+              onFocus={() => setIsOpen(true)}
             />
-            <div className="absolute inset-y-0 right-0 flex items-center pr-2">
-              <Combobox.Button>
-                <ChevronUpDownIcon
-                  className="h-5 w-5 text-gray-400"
-                  aria-hidden="true"
-                />
-              </Combobox.Button>
-            </div>
+            <div className="absolute inset-y-0 right-0 flex items-center pr-2"></div>
           </div>
           <Transition
             as={Fragment}
@@ -100,6 +115,7 @@ export default function ComboBox({ dataset, onTeamSelected }: ComboBoxProps) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
             afterLeave={() => setQuery("")}
+            show={isOpen}
           >
             <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none md:text-sm px-2 z-10">
               <div className="flex flex-wrap">

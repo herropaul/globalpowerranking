@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import TeamRankings from "@/app/team-rankings/page";
@@ -31,6 +31,8 @@ export default function ComboBox({
   const [selectedRegion, setSelectedRegion] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
+  const comboboxRef = useRef<HTMLDivElement>(null);
+
   const handleSelection = (tournamentID: string) => {
     onTournamentSelected(tournamentID);
   };
@@ -54,8 +56,25 @@ export default function ComboBox({
     return matchesQuery && matchesRegion;
   });
 
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        comboboxRef.current &&
+        !comboboxRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [comboboxRef, setIsOpen]);
+
   return (
-    <div className="flex w-full sm:w-5/6 ">
+    <div className="flex w-full sm:w-5/6 " ref={comboboxRef}>
       <Combobox value={selected} onChange={setSelected}>
         <div className="w-full relative mt-1">
           <div className="relative w-full cursor-default overflow-hidden rounded-xl bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 text-xs sm:text-sm">
