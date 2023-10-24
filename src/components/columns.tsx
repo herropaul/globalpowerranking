@@ -1,24 +1,24 @@
-"use client"
- 
-import { Button } from "@/components/ui/button"
-import { ColumnDef } from "@tanstack/react-table"
-import { ArrowUpDown, MoreHorizontal } from "lucide-react"
-import Image from "next/image"
+"use client";
 
-export type Team = {
-  id: string
-  ranking: number
-  name: string
-  teamLogoURL: string
-  winrate: number
-  winfrac: string
-  score: string
-  league_name: string
-  region: string
-  acronym: string
-}
- 
-export const columns: ColumnDef<Team>[] = [
+import { Button } from "@/components/ui/button";
+import { ColumnDef } from "@tanstack/react-table";
+import { ArrowUpDown, MoreHorizontal } from "lucide-react";
+import Image from "next/image";
+
+export type TeamType = {
+  id: string;
+  ranking: number;
+  name: string;
+  teamLogoURL: string;
+  winrate: number;
+  winfrac: string;
+  score: number;
+  league_name: string;
+  region: string;
+  acronym: string;
+};
+
+export const columns: ColumnDef<TeamType>[] = [
   {
     accessorKey: "ranking",
     header: ({ column }) => {
@@ -28,9 +28,9 @@ export const columns: ColumnDef<Team>[] = [
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           Ranking
-          <ArrowUpDown className="ml-2 h-4 w-4"/>
+          <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
-      )
+      );
     },
   },
   {
@@ -42,18 +42,23 @@ export const columns: ColumnDef<Team>[] = [
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           Team Name
-          <ArrowUpDown className="ml-2 h-4 w-4"/>
+          <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
-      )
+      );
     },
-    cell: tableProps => (
+    cell: (tableProps) => (
       <div className="flex">
-        <Image src={tableProps.row.original.teamLogoURL} width={40} height={30} alt="team logo"/>
+        <Image
+          src={tableProps.row.original.teamLogoURL}
+          width={40}
+          height={30}
+          alt="team logo"
+        />
         <div className="flex flex-col justify-center text-3xl pl-6 font-molend-regular">
           {tableProps.row.original.name}
         </div>
       </div>
-    )
+    ),
   },
   {
     accessorKey: "winrate",
@@ -63,4 +68,4 @@ export const columns: ColumnDef<Team>[] = [
     accessorKey: "winfrac",
     header: "Win Ratio",
   },
-]
+];

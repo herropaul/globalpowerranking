@@ -39,41 +39,33 @@ export default function ComboBox({ dataset, onTeamSelected }: ComboBoxProps) {
       return;
     }
 
-    let wins = 0;
-    let totalGames = selectedTeams.length;
+    // Get original winrates
+    const allTeamsWithOriginalWinrates = [selectedTeam, ...selectedTeams].map(
+      (team) => ({
+        ...team,
+        originalWinrate: dataset.find((t) => t.id === team.id)?.winrate,
+      })
+    );
 
-    // For every already selected team, compare with the newly selected team
-    selectedTeams.forEach((team) => {
-      if (selectedTeam.ranking < team.ranking) {
-        wins++;
-      }
+    // Sort all teams by their original winrates in descending order
+    const sortedTeams = allTeamsWithOriginalWinrates.sort((a, b) => {
+      return (b.originalWinrate || 0) - (a.originalWinrate || 0);
     });
 
-    // Calculate winfrac and winrate for the newly selected team
-    const winfrac = `${wins}/${totalGames}`;
-    const winrate = (wins / totalGames) * 100;
+    // Assign rankings based on the sorted order
+    const rerankedTeams = sortedTeams.map((team, index) => ({
+      ...team,
+      ranking: index + 1, // Set rank starting from 1 for the highest winrate
+    }));
 
-    const newTeam = {
-      ...selectedTeam,
-      winfrac,
-      winrate,
-    };
-
-    // Add the new team to the list of selected teams
-    const allSelectedTeams = [newTeam, ...selectedTeams];
-
-    // Sort by winrate in descending order and re-rank
-    const rankedTeams = allSelectedTeams
-      .sort((a, b) => b.winrate - a.winrate)
-      .map((team, index) => ({
-        ...team,
-        ranking: index + 1,
-      }));
-
-    setSelectedTeams(rankedTeams);
-    onTeamSelected(rankedTeams);
+    setSelectedTeams(rerankedTeams);
+    onTeamSelected(rerankedTeams);
   };
 
+  const clearSelection = () => {
+    setSelectedTeams([]);
+    onTeamSelected([]);
+  };
 
   const teams = allTeams;
 
@@ -194,6 +186,12 @@ export default function ComboBox({ dataset, onTeamSelected }: ComboBoxProps) {
           </Transition>
         </div>
       </Combobox>
+      <button
+        className="px-2 py-2 mx-3 font-bold text-white rounded bg-teal-500 hover:bg-teal-700 "
+        onClick={clearSelection}
+      >
+        Clear Selection
+      </button>
     </div>
   );
 }

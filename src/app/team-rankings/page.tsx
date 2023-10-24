@@ -18,13 +18,6 @@ export default function TeamRankings() {
     setIsClient(true);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
-    e.preventDefault(); // Prevent the default form submission.
-    if (selectedTeams) {
-      const encodedTeams = btoa(selectedTeams.join(","));
-      router.push(`/team-rankings/${encodedTeams}`);
-    }
-  };
   return (
     <div
       className="flex flex-col min-h-screen w-full relative z-0 overflow-hidden"
