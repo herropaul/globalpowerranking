@@ -12,7 +12,7 @@ export type Team = {
   teamLogoURL: string
   winrate: number
   winfrac: string
-  score: string
+  score: number
   league_name: string
   region: string
   acronym: string
@@ -32,6 +32,11 @@ export const columns: ColumnDef<Team>[] = [
         </Button>
       )
     },
+    cell: tableProps => (
+      <div className="flex pl-10 text-3xl font-molend-regular">
+        {tableProps.row.original.ranking}
+      </div>
+    )
   },
   {
     accessorKey: "name",
@@ -48,8 +53,11 @@ export const columns: ColumnDef<Team>[] = [
     },
     cell: tableProps => (
       <div className="flex">
-        <Image src={tableProps.row.original.teamLogoURL} width={40} height={30} alt="team logo"/>
-        <div className="flex flex-col justify-center text-3xl pl-6 font-molend-regular">
+        <Image src={tableProps.row.original.teamLogoURL} 
+          width={45} height={40} alt="team logo"
+          style={{ width: 45, height: 40 }}
+        />
+        <div className="flex flex-col justify-center text-3xl pl-6">
           {tableProps.row.original.name}
         </div>
       </div>
@@ -58,9 +66,19 @@ export const columns: ColumnDef<Team>[] = [
   {
     accessorKey: "winrate",
     header: "Win %",
+    cell: tableProps => (
+      <div className="flex text-lg">
+        {tableProps.row.original.winrate}
+      </div>
+    )
   },
   {
     accessorKey: "winfrac",
     header: "Win Ratio",
+    cell: tableProps => (
+      <div className="text-lg">
+        {(tableProps.row.original.winfrac)}
+      </div>
+    )
   },
 ]
