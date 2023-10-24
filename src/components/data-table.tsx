@@ -117,10 +117,10 @@ export function DataTable<TData extends object, TValue = any>({
                   <TableHead key={header.id}>
                     {header.isPlaceholder
                       ? null
-                      : flexRender(
+                      : (flexRender(
                           header.column.columnDef.header,
                           header.getContext()
-                        )}
+                        ) as React.ReactNode)}
                   </TableHead>
                 ))}
               </TableRow>
@@ -136,14 +136,16 @@ export function DataTable<TData extends object, TValue = any>({
                   >
                     {row.getVisibleCells().map((cell) => (
                       <TableCell key={cell.id}>
-                        {flexRender(
-                          cell.column.columnDef.cell,
-                          cell.getContext()
-                        )}
+                        {
+                          flexRender(
+                            cell.column.columnDef.cell,
+                            cell.getContext()
+                          ) as React.ReactNode
+                        }
                       </TableCell>
                     ))}
                   </TableRow>
-                  {row.getIsExpanded() && (
+                  {/* {row.getIsExpanded() && (
                     <TableRow>
                       <TableCell colSpan={columns.length}>
                         <div style={{ padding: "1rem" }}>
@@ -164,7 +166,7 @@ export function DataTable<TData extends object, TValue = any>({
                         </div>
                       </TableCell>
                     </TableRow>
-                  )}
+                  )} */}
                 </>
               ))
             ) : (
