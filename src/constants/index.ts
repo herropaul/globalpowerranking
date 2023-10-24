@@ -1,79 +1,71 @@
 export const teamInfo = [
     {
-        name: "Justin",
+        name: "Justin Chung",
         role: "Frontend Developer",
-        imageUrl: "/Aatrox_0.jpg",
+        imageUrl: "/team_member_icons/Kaisa_0.jpg",
+        description: "",
         socials: [
-            { title: "Discord", url: "/" },
-            { title: "Github", url: "/" },
-            { title: "LinkedIn", url: "/" },
-            { title: "Twitter", url: "/" }
+            { title: "Github", url: "https://github.com/jchun247" },
+            { title: "LinkedIn", url: "https://www.linkedin.com/in/jchun247/" }
         ]
     },
     {
-        name: "Paul",
+        name: "Paul Nguon",
         role: "Frontend Developer",
-        imageUrl: "/Aatrox_1.jpg",
+        imageUrl: "/team_member_icons/Velkoz_1.jpg",
+        description: "",
         socials: [
-            { title: "Discord", url: "/" },
-            { title: "Github", url: "/" },
-            { title: "LinkedIn", url: "/" },
-            { title: "Twitter", url: "/" }
+            { title: "Github", url: "https://github.com/herropaul" },
+            { title: "LinkedIn", url: "https://www.linkedin.com/in/paul-nguon/" }
         ]
     },
     {
-        name: "Dylan",
-        role: "Backend Developer",
-        imageUrl: "/Aatrox_2.jpg",
-        socials: [
-            { title: "Discord", url: "/" },
-            { title: "Github", url: "/" },
-            { title: "LinkedIn", url: "/" },
-            { title: "Twitter", url: "/" }
-        ]
-    },
-    {
-        name: "Hunter",
-        role: "Backend Developer",
-        imageUrl: "/Aatrox_3.jpg",
-        socials: [
-            { title: "Discord", url: "/" },
-            { title: "Github", url: "/" },
-            { title: "LinkedIn", url: "/" },
-            { title: "Twitter", url: "/" }
-        ]
-    },
-    {
-        name: "Siddharth",
-        role: "Backend Developer",
-        imageUrl: "/Aatrox_7.jpg",
-        socials: [
-            { title: "Discord", url: "/" },
-            { title: "Github", url: "/" },
-            { title: "LinkedIn", url: "/" },
-            { title: "Twitter", url: "/" }
-        ]
-    },
-    {
-        name: "Sarah",
+        name: "Sarah Jay Thraen",
         role: "UI/UX Designer",
-        imageUrl: "/Aatrox_8.jpg",
+        imageUrl: "/team_member_icons/Jinx_38.jpg",
+        description: "",
         socials: [
-            { title: "Discord", url: "/" },
-            { title: "Github", url: "/" },
-            { title: "LinkedIn", url: "/" },
-            { title: "Twitter", url: "/" }
+            { title: "website", url: "http://www.sarahjaythraen.com" },
+            { title: "LinkedIn", url: "https://www.linkedin.com/in/sarahthraen" }
         ]
     },
     {
-        name: "Seb",
+        name: "Dylan Wattles",
         role: "Backend Developer",
-        imageUrl: "/Aatrox_9.jpg",
+        imageUrl: "/team_member_icons/Heimerdinger_2.jpg",
+        description: "",
         socials: [
-            { title: "Discord", url: "/" },
-            { title: "Github", url: "/" },
-            { title: "LinkedIn", url: "/" },
-            { title: "Twitter", url: "/" }
+            { title: "Github", url: "https://github.com/dwattles" },
+            { title: "LinkedIn", url: "https://www.linkedin.com/in/dylan-wattles" }
+        ]
+    },
+    {
+        name: "Hunter Lewis",
+        role: "Backend Developer",
+        imageUrl: "/team_member_icons/Aphelios_0.jpg",
+        description: "",
+        socials: [
+            { title: "Github", url: "https://github.com/THESUPP0RTER" },
+            { title: "LinkedIn", url: "/" }
+        ]
+    },
+    {
+        name: "Siddharth Kunche",
+        role: "AWS Solutions Architect",
+        imageUrl: "/team_member_icons/Ekko_36.jpg",
+        description: "",
+        socials: [
+            { title: "Github", url: "https://github.com/siddharthkunche/" },
+            { title: "LinkedIn", url: "https://www.linkedin.com/in/siddharth-kunche-323bbb192/" }
+        ]
+    },
+    {
+        name: "Sebastian Gonzalez",
+        role: "Backend Developer",
+        imageUrl: "/team_member_icons/Fiora_41.jpg",
+        description: "",
+        socials: [
+            { title: "Github", url: "https://github.com/Sebas2545" }
         ]
     },
 ]
