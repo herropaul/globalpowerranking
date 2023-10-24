@@ -27,7 +27,7 @@ export default function GlobalRankings() {
         </h1>
       </div>
 
-      <div className="container mx-auto py-10">
+      <div className="container mx-auto py-4">
         <DataTable columns={columns} data={sortByKey(data, "ranking")} />
       </div>
 
