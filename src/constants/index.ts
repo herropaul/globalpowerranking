@@ -2,10 +2,10 @@ export const teamInfo = [
     {
         name: "Justin",
         role: "Frontend Developer",
-        imageUrl: "/Aatrox_0.jpg",
+        imageUrl: "/team_member_icons/Kaisa_0.jpg",
         socials: [
             { title: "Discord", url: "/" },
-            { title: "Github", url: "/" },
+            { title: "Github", url: "https://github.com/jchun247" },
             { title: "LinkedIn", url: "/" },
             { title: "Twitter", url: "/" }
         ]
@@ -13,7 +13,18 @@ export const teamInfo = [
     {
         name: "Paul",
         role: "Frontend Developer",
-        imageUrl: "/Aatrox_1.jpg",
+        imageUrl: "/team_member_icons/paul_github.jpg",
+        socials: [
+            { title: "Discord", url: "/" },
+            { title: "Github", url: "https://github.com/herropaul" },
+            { title: "LinkedIn", url: "/" },
+            { title: "Twitter", url: "/" }
+        ]
+    },
+    {
+        name: "Sarah",
+        role: "UI/UX Designer",
+        imageUrl: "/Aatrox_8.jpg",
         socials: [
             { title: "Discord", url: "/" },
             { title: "Github", url: "/" },
@@ -24,10 +35,10 @@ export const teamInfo = [
     {
         name: "Dylan",
         role: "Backend Developer",
-        imageUrl: "/Aatrox_2.jpg",
+        imageUrl: "/team_member_icons/Heimerdinger_2.jpg",
         socials: [
             { title: "Discord", url: "/" },
-            { title: "Github", url: "/" },
+            { title: "Github", url: "https://github.com/dwattles" },
             { title: "LinkedIn", url: "/" },
             { title: "Twitter", url: "/" }
         ]
@@ -38,26 +49,15 @@ export const teamInfo = [
         imageUrl: "/Aatrox_3.jpg",
         socials: [
             { title: "Discord", url: "/" },
-            { title: "Github", url: "/" },
+            { title: "Github", url: "https://github.com/THESUPP0RTER" },
             { title: "LinkedIn", url: "/" },
             { title: "Twitter", url: "/" }
         ]
     },
     {
         name: "Siddharth",
-        role: "Backend Developer",
-        imageUrl: "/Aatrox_7.jpg",
-        socials: [
-            { title: "Discord", url: "/" },
-            { title: "Github", url: "/" },
-            { title: "LinkedIn", url: "/" },
-            { title: "Twitter", url: "/" }
-        ]
-    },
-    {
-        name: "Sarah",
-        role: "UI/UX Designer",
-        imageUrl: "/Aatrox_8.jpg",
+        role: "AWS Solutions Architect",
+        imageUrl: "/team_member_icons/siddharth.jpg",
         socials: [
             { title: "Discord", url: "/" },
             { title: "Github", url: "/" },

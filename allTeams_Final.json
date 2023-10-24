@@ -1230,7 +1230,7 @@
         "score": 0.08071748878923767,
         "winfrac": "18 / 223",
         "ranking": 103,
-        "teamLogoURL": "/lol_team_logo/cblol/KaBuM%21_Esportslogo_square.png",
+        "teamLogoURL": "/lol_team_logo/cblol/KaBuM21_Esportslogo_square.png",
         "winrate": 0.08071748878923767,
         "league_name": "CBLOL",
         "region": "BRAZIL"
@@ -1471,7 +1471,7 @@
         "id": "103535282124208038",
         "score": 1.0,
         "ranking": 0,
-        "teamLogoURL": "/lol_team_logo/unknown/QuestionMark.png"
+        "teamLogoURL": "/lol_team_logo/lco/Pentanet.GGlogo_square.png"
     },
     {
         "name": "PEACE",
@@ -1481,7 +1481,7 @@
         "id": "105709099258505657",
         "score": 0.8214285714285714,
         "ranking": 0,
-        "teamLogoURL": "/lol_team_logo/unknown/QuestionMark.png"
+        "teamLogoURL": "/lol_team_logo/lco/PEACE_29logo_square.png"
     },
     {
         "name": "MAMMOTH",
@@ -1491,7 +1491,7 @@
         "id": "101383792887446028",
         "score": 0.3214285714285714,
         "ranking": 0,
-        "teamLogoURL": "/lol_team_logo/unknown/QuestionMark.png"
+        "teamLogoURL": "/lol_team_logo/lco/MAMMOTHlogo_square.png"
     },
     {
         "name": "Gravitas",
@@ -1501,7 +1501,7 @@
         "id": "101383792891050518",
         "score": 0.3214285714285714,
         "ranking": 0,
-        "teamLogoURL": "/lol_team_logo/unknown/QuestionMark.png"
+        "teamLogoURL": "/lol_team_logo/lco/Gravitaslogo_square.png"
     },
     {
         "name": "Kanga Esports",
@@ -1511,7 +1511,7 @@
         "id": "107437032053655867",
         "score": 0.3214285714285714,
         "ranking": 0,
-        "teamLogoURL": "/lol_team_logo/unknown/QuestionMark.png"
+        "teamLogoURL": "/lol_team_logo/lco/Kanga_Esportslogo_square.png"
     },
     {
         "name": "Dire Wolves",
@@ -1521,7 +1521,7 @@
         "id": "98767991921462763",
         "score": 0.3214285714285714,
         "ranking": 0,
-        "teamLogoURL": "/lol_team_logo/unknown/QuestionMark.png"
+        "teamLogoURL": "/lol_team_logo/lco/Dire_Wolveslogo_square.png"
     },
     {
         "name": "Riddle Esports",
@@ -1841,7 +1841,7 @@
         "id": "99566408356697119",
         "score": 1.0,
         "ranking": 0,
-        "teamLogoURL": "/lol_team_logo/unknown/QuestionMark.png"
+        "teamLogoURL": "/lol_team_logo/lhe/Furious_Gaminglogo_square.png"
     },
     {
         "name": "Dark Horse",
@@ -1851,7 +1851,7 @@
         "id": "107599112065439311",
         "score": 0.4444444444444444,
         "ranking": 0,
-        "teamLogoURL": "/lol_team_logo/unknown/QuestionMark.png"
+        "teamLogoURL": "/lol_team_logo/lhe/Dark_Horselogo_square.png"
     },
     {
         "name": "Maze Gaming",
@@ -1861,7 +1861,7 @@
         "id": "107599144012469862",
         "score": 0.4444444444444444,
         "ranking": 0,
-        "teamLogoURL": "/lol_team_logo/unknown/QuestionMark.png"
+        "teamLogoURL": "/lol_team_logo/lhe/Maze_Gaminglogo_square.png"
     },
     {
         "name": "Movistar Optix",
@@ -1871,7 +1871,7 @@
         "id": "107599156601411192",
         "score": 0.4444444444444444,
         "ranking": 0,
-        "teamLogoURL": "/lol_team_logo/unknown/QuestionMark.png"
+        "teamLogoURL": "/lol_team_logo/lhe/Movistar_Optixlogo_square.png"
     },
     {
         "name": "Newstar",
@@ -1881,7 +1881,7 @@
         "id": "107599061926073885",
         "score": 0.4444444444444444,
         "ranking": 0,
-        "teamLogoURL": "/lol_team_logo/unknown/QuestionMark.png"
+        "teamLogoURL": "/lol_team_logo/lhe/Newstarlogo_square.png"
     },
     {
         "name": "Rebirth Esports",
@@ -1891,7 +1891,7 @@
         "id": "107599174108436104",
         "score": 0.4444444444444444,
         "ranking": 0,
-        "teamLogoURL": "/lol_team_logo/unknown/QuestionMark.png"
+        "teamLogoURL": "/lol_team_logo/lhe/Rebirth_eSportslogo_square.png"
     },
     {
         "name": "Santiago Wanderers",
@@ -1901,7 +1901,7 @@
         "id": "107599089191671351",
         "score": 0.4444444444444444,
         "ranking": 0,
-        "teamLogoURL": "/lol_team_logo/unknown/QuestionMark.png"
+        "teamLogoURL": "/lol_team_logo/lhe/Santiago_Wanderers_eSportslogo_square.png"
     },
     {
         "name": "Wolf Club Gaming",
@@ -1911,7 +1911,7 @@
         "id": "107599188771591359",
         "score": 0.4444444444444444,
         "ranking": 0,
-        "teamLogoURL": "/lol_team_logo/unknown/QuestionMark.png"
+        "teamLogoURL": "/lol_team_logo/lhe/Wolf_Club_Esportslogo_square.png"
     },
     {
         "name": "Cruzados Esports",
@@ -1921,7 +1921,7 @@
         "id": "107598982142057588",
         "score": 0.4444444444444444,
         "ranking": 0,
-        "teamLogoURL": "/lol_team_logo/unknown/QuestionMark.png"
+        "teamLogoURL": "/lol_team_logo/lhe/Cruzados_Esportslogo_square.png"
     },
     {
         "name": "Meta Gaming",
@@ -1931,7 +1931,7 @@
         "id": "107599040773840060",
         "score": 0.4444444444444444,
         "ranking": 0,
-        "teamLogoURL": "/lol_team_logo/unknown/QuestionMark.png"
+        "teamLogoURL": "/lol_team_logo/lhe/Meta_Gaminglogo_square.png"
     },
     {
         "name": "X7",
