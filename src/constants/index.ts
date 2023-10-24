@@ -1,7 +1,7 @@
 export const teamInfo = [
     {
         name: "Justin Chung",
-        role: "Frontend Developer",
+        role: "Frontend Engineer",
         imageUrl: "/team_member_icons/Kaisa_0.jpg",
         description: "",
         socials: [
@@ -11,7 +11,7 @@ export const teamInfo = [
     },
     {
         name: "Paul Nguon",
-        role: "Frontend Developer",
+        role: "Frontend Engineer",
         imageUrl: "/team_member_icons/Velkoz_1.jpg",
         description: "",
         socials: [
@@ -31,7 +31,7 @@ export const teamInfo = [
     },
     {
         name: "Dylan Wattles",
-        role: "Backend Developer",
+        role: "Data Scientist",
         imageUrl: "/team_member_icons/Heimerdinger_2.jpg",
         description: "",
         socials: [
@@ -41,12 +41,13 @@ export const teamInfo = [
     },
     {
         name: "Hunter Lewis",
-        role: "Backend Developer",
+        role: "Data Scientist and Fullstack Architect",
         imageUrl: "/team_member_icons/Aphelios_0.jpg",
         description: "",
         socials: [
             { title: "Github", url: "https://github.com/THESUPP0RTER" },
-            { title: "LinkedIn", url: "/" }
+            { title: "Twitter", url: "https://bsky.app/profile/thesupporter.bsky.social"}
+
         ]
     },
     {
@@ -61,7 +62,7 @@ export const teamInfo = [
     },
     {
         name: "Sebastian Gonzalez",
-        role: "Backend Developer",
+        role: "Backend Engineer",
         imageUrl: "/team_member_icons/Fiora_41.jpg",
         description: "",
         socials: [
