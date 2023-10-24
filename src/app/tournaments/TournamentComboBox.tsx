@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import TeamRankings from "@/app/team-rankings/page";
@@ -29,6 +29,9 @@ export default function ComboBox({
   const [selected, setSelected] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const comboboxRef = useRef<HTMLDivElement>(null);
 
   const handleSelection = (tournamentID: string) => {
     onTournamentSelected(tournamentID);
@@ -53,25 +56,38 @@ export default function ComboBox({
     return matchesQuery && matchesRegion;
   });
 
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        comboboxRef.current &&
+        !comboboxRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [comboboxRef, setIsOpen]);
+
   return (
-    <div className="flex w-full sm:w-5/6 ">
+    <div className="flex w-full sm:w-5/6 " ref={comboboxRef}>
       <Combobox value={selected} onChange={setSelected}>
         <div className="w-full relative mt-1">
-          <div className="relative w-full cursor-default overflow-hidden rounded-xl bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 text-xs sm:text-sm">
+          <div className="relative w-full cursor-default overflow-hidden rounded-xl bg-white text-left shadow-md focus:outline-none text-xs sm:text-sm">
             <Combobox.Input
               className="w-full border-none py-2 pl-3 pr-10 text-base leading-5 bg-white text-gray-900 focus:ring-0 md:text-lg"
               placeholder="Select a tournament..."
               displayValue={(data: any) => data}
               onChange={(event) => setQuery(event.target.value)}
+              onFocus={() => {
+                setIsOpen(true);
+              }}
             />
-            <div className="absolute inset-y-0 right-0 flex items-center pr-2">
-              <Combobox.Button>
-                <ChevronUpDownIcon
-                  className="h-5 w-5 text-gray-400"
-                  aria-hidden="true"
-                />
-              </Combobox.Button>
-            </div>
+            <div className="absolute inset-y-0 right-0 flex items-center pr-2"></div>
           </div>
           <Transition
             as={Fragment}
@@ -79,6 +95,7 @@ export default function ComboBox({
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
             afterLeave={() => setQuery("")}
+            show={isOpen}
           >
             <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none md:text-sm px-2">
               <div className="flex flex-wrap">
@@ -128,7 +145,10 @@ export default function ComboBox({
                       }`
                     }
                     value={tournament.name}
-                    onClick={() => handleSelection(tournament.tournament_id)}
+                    onClick={() => {
+                      handleSelection(tournament.tournament_id);
+                      setIsOpen(false);
+                    }}
                   >
                     {({ selected, active }) => (
                       <>
