@@ -134,6 +134,20 @@ export default function Home() {
             </>
           )}
           <div className="flex flex-col">
+            <section id="overview-section">
+              <h2 className="text-5xl py-3">Overview</h2>
+              <div className=" text-2xl py-3">
+                <p>
+                  Welcome to Heimer&apos;s Hackers Power Ranking, the entry for
+                  the Global Power Ranking Hackathon. Our web-app offers users
+                  an engaging experience, providing insights and predictions
+                  related to League of Legends Global Teams/Tournaments. We have
+                  created these predictions through the usage of open data
+                  provided to us by Riot, containing information from 2020 to
+                  2023.
+                </p>
+              </div>
+            </section>
             <h2 className="text-5xl py-3">Demo</h2>
             <div className="mt-6 flex justify-center">
               <ReactPlayer
