@@ -151,7 +151,7 @@ export default function Home() {
             <h2 className="text-5xl py-3">Demo</h2>
             <div className="mt-6 flex justify-center">
               <ReactPlayer
-                url="https://youtu.be/qLCf9HkTfHY"
+                url="https://youtu.be/7R6PkTOicTk"
                 width={1280}
                 height={720}
                 controls={true}
@@ -159,7 +159,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-6 flex flex-col">
-            <h2 className="flex text-5xl py-12">Team Members</h2>
+            <h2 className="flex text-5xl py-6">Team Members</h2>
             <TeamMembers teamInfo={teamInfo} />
           </div>
         </div>

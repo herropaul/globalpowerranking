@@ -50,7 +50,7 @@ export const columns: ColumnDef<TeamType>[] = [
           height={30}
           alt="team logo"
         />
-        <div className="flex flex-col justify-center text-3xl pl-6 font-molend-regular">
+        <div className="flex flex-col justify-center text-3xl pl-6">
 
           {tableProps.row.original.name}
         </div>
