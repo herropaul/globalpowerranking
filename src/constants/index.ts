@@ -46,7 +46,10 @@ export const teamInfo = [
         description: "",
         socials: [
             { title: "Github", url: "https://github.com/THESUPP0RTER" },
-            { title: "Twitter", url: "https://bsky.app/profile/thesupporter.bsky.social"}
+            { title: "LinkedIn", url: "https://www.linkedin.com/in/hunter-lewis9"},
+            { title: "website", url: "http://ghunterlewis.com.s3-website-us-west-1.amazonaws.com/" },
+            { title: "Twitter", url: "https://bsky.app/profile/thesupporter.bsky.social"},
+            
 
         ]
     },
